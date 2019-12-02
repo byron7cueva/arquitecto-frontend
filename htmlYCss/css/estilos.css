@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+:root{
+  --green-color: #7ACC2D;
+  --white-color: white;
+  --black-color: #313337
+  --box: box-shadow: 0 0 2px 1px #e6e5e9;
+}
+
+html, body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+figure {
+  margin: 0;
+}
+
+nav {
+  align-items: center;
+  background-color: var(--green-color);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav li {
+  padding-left: 20px;
+}
+
+nav li a {
+  color: var(--black-color);
+  text-decoration: none;
+}
+
+nav li a:hover {
+  color: var(--white-color);
+}
+
+.main {
+  padding: 15%;
+  text-align: center;
+}
+
+.products {
+  background-image: url("../images/curve.png");
+  background-position: center top;
+  background-size: cover;
+  padding-top: 35vh;
+  position: relative;
+}
+
+.products .content {
+  display: flex;
+  justify-content: center;
+  left: 0;
+  margin: 0 15%;
+  right: 0;
+  top: -50px;
+  position: absolute;
+}
+
+.product {
+  background-color: var(--white-color);
+  box-shadow: 0 0 2px 1px #e6e5e9;
+  margin: 0 2em;
+  padding: 0.9em;
+}
+
+
+.product .image-content {
+  text-align: center;
+}
+
+.product button {
+  background-color: var(--green-color);
+  border: none;
+  border-radius: 5px;
+  color: var(--white-color);
+  cursor: pointer;
+  padding: 1em;
+  width: 100%;
+}
+
+.product button:hover {
+  background-color: #6cc11d;
+}
