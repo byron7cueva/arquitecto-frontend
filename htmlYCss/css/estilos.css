@@ -3,8 +3,8 @@
 :root{
   --green-color: #7ACC2D;
   --white-color: white;
-  --black-color: #313337
-  --box: box-shadow: 0 0 2px 1px #e6e5e9;
+  --black-color: #313337;
+  --box: 0 0 2px 1px #e6e5e9;
 }
 
 html, body {
@@ -28,6 +28,7 @@ nav {
   position: fixed;
   top: 0;
   right: 0;
+  z-index: 1;
 }
 
 nav ul {
@@ -53,6 +54,11 @@ nav li a:hover {
   padding: 15%;
   text-align: center;
 }
+
+.main {
+  font-size: 1.67em;
+  font-weight: bold;
+}
 /* End main section */
 
 /* Init products section */
@@ -76,7 +82,7 @@ nav li a:hover {
 
 .product {
   background-color: var(--white-color);
-  box-shadow: 0 0 2px 1px #e6e5e9;
+  box-shadow: var(--box);
   margin: 0 2em;
   padding: 0.9em;
 }
@@ -128,3 +134,48 @@ nav li a:hover {
   margin: 0;
 }
 /* End categories section  */
+
+/* Init mentios section */
+.mentions {
+  border: 1px solid #eee;
+  padding: 2.5em 5em 1.5em 5em;
+}
+
+.mentions h2 {
+  text-align: center;
+}
+
+.mentions-content {
+  display: flex;
+}
+
+.mention {
+  border-radius: 5px;
+  box-shadow: var(--box);
+  overflow: hidden;
+}
+
+.mention h3 {
+  margin: 0;
+}
+
+.mention p {
+  margin: 0.5em 0 0 0;
+}
+
+.mention .description {
+  padding: 0.5em;
+}
+
+.mention figure img {
+  width: 100%;
+}
+
+.mention:nth-child(odd) {
+  margin-right: 1em;
+}
+
+.mention:nth-child(even) {
+  margin-right: 1em;
+}
+/* End mentions section */
