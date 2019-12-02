@@ -14,7 +14,7 @@ html, body {
   padding: 0;
 }
 
-figure {
+figure, ul {
   margin: 0;
 }
 
@@ -179,3 +179,18 @@ nav li a:hover {
   margin-right: 1em;
 }
 /* End mentions section */
+
+/* Init footer section */
+footer {
+  align-items: center;
+  background-color: var(--black-color);
+  color: var(--white-color);
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5em;
+}
+
+footer p {
+  margin: 0;
+}
+/* End footer section */
