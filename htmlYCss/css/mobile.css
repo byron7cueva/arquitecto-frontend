@@ -1,0 +1,36 @@
+@media screen and (max-width: 768px) {
+
+  /*Init main section*/
+  .main {
+    margin-top: 60px;
+    padding: 5%;
+  }
+  /*End main*/
+
+  /*Init products section */
+  .products {
+    padding: 0 0 1em 0;
+  }
+
+  .products .content {
+    position: initial;
+    flex-direction: column;
+    margin: 0;
+    padding: 0 1em;
+  }
+
+  .product {
+    margin: 0 0 1em 0;
+  }
+  /*End products section */
+
+  /* Init categories section */
+  .categories, .mentions-content {
+    flex-direction: column;
+  }
+
+  .mention {
+    margin: 0 0 1em 0;
+  }
+  /*End mentions section*/
+}
