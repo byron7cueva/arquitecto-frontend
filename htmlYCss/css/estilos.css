@@ -22,8 +22,12 @@ nav {
   align-items: center;
   background-color: var(--green-color);
   display: flex;
+  left: 0;
   justify-content: space-between;
   padding: 10px;
+  position: fixed;
+  top: 0;
+  right: 0;
 }
 
 nav ul {
@@ -44,16 +48,19 @@ nav li a:hover {
   color: var(--white-color);
 }
 
+/* Init main section */
 .main {
   padding: 15%;
   text-align: center;
 }
+/* End main section */
 
+/* Init products section */
 .products {
   background-image: url("../images/curve.png");
   background-position: center top;
   background-size: cover;
-  padding-top: 35vh;
+  padding-bottom: 45vh;
   position: relative;
 }
 
@@ -92,3 +99,32 @@ nav li a:hover {
 .product button:hover {
   background-color: #6cc11d;
 }
+
+/* End products section */
+
+/* Init categories section */
+.categories {
+  display: flex;
+  padding: 5% 20%;
+}
+
+.category {
+  padding: 1em;
+}
+
+.category figure  {
+  text-align: center;
+}
+
+.category figure img {
+  height: 100px;
+}
+
+.category h3 {
+  text-align: center;
+}
+
+.category p {
+  margin: 0;
+}
+/* End categories section  */
