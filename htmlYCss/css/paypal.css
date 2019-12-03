@@ -1,0 +1,13 @@
+body {
+  align-items: center;
+  background-color: var(--black-color);
+  color: var(--white-color);
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+a {
+  color: var(--green-color);
+}

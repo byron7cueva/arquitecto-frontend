@@ -14,8 +14,28 @@ html, body {
   padding: 0;
 }
 
+button {
+  background-color: var(--green-color);
+  border: none;
+  border-radius: 5px;
+  color: var(--white-color);
+  cursor: pointer;
+  padding: 1em;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #6cc11d;
+}
+
 figure, ul {
   margin: 0;
+}
+
+input {
+  border: 1px solid var(--black-color);
+  border-radius: 3px;
+  padding: 1em;
 }
 
 nav {
@@ -90,20 +110,6 @@ nav li a:hover {
 
 .product .image-content {
   text-align: center;
-}
-
-.product button {
-  background-color: var(--green-color);
-  border: none;
-  border-radius: 5px;
-  color: var(--white-color);
-  cursor: pointer;
-  padding: 1em;
-  width: 100%;
-}
-
-.product button:hover {
-  background-color: #6cc11d;
 }
 
 /* End products section */
@@ -193,4 +199,29 @@ footer {
 footer p {
   margin: 0;
 }
+
+.contact a {
+  color: var(--green-color);
+  text-decoration: none;
+}
 /* End footer section */
+
+/*Init sell module */
+.sell-module {
+  box-shadow: var(--box);
+  padding: 1em;
+}
+
+.sell-module figure{
+  text-align: center;
+}
+
+.sell-module form {
+  display: flex;
+  flex-direction: column;
+}
+
+.sell-module form input {
+  margin-bottom: 1.35em;
+}
+/* End sell module */
