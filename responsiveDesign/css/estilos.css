@@ -1,5 +1,48 @@
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro&display=swap');
 
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?eio5h7');
+  src:  url('../fonts/icomoon.eot?eio5h7#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?eio5h7') format('truetype'),
+    url('../fonts/icomoon.woff?eio5h7') format('woff'),
+    url('../fonts/icomoon.svg?eio5h7#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menu:before {
+  content: "\e9bd";
+}
+.icon-facebook:before {
+  content: "\ea91";
+}
+.icon-instagram:before {
+  content: "\ea92";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+.icon-github:before {
+  content: "\eab0";
+}
+
 :root {
   --gray-background: #1b2127;
   --gray-light: #fafafa;
@@ -43,6 +86,22 @@ h2 {
   text-transform: uppercase;
 }
 
+.burger-menu {
+  background-color: rgba(0,0,0,0.8);
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  display: none;
+  height: 40px;
+  line-height: 40px;
+  position: fixed;
+  text-align: center;
+  top: 0.5em;
+  left: 0.5em;
+  width: 40px;
+  z-index: 3;
+}
+
 .header {
   background-color: var(--gray-dark);
   display: flex;
@@ -83,12 +142,13 @@ h2 {
 }
 
 .hero figure {
+  max-height: 100%;
   height: 350px;
 }
 
 .hero figure img {
   width: 100%;
-  height: 350px;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -133,7 +193,8 @@ h2 {
 }
 
 .project-image img {
-  width: 100%;
+  max-width: 100%;
+  width: 500px;
 }
 
 .project-title {
@@ -194,9 +255,15 @@ h2 {
 }
 
 .experience-image img {
-  height: 200px;
+  height: auto;
+  max-height: 257px;
   object-fit: cover;
   width: 100%;
+}
+
+.experience-image video {
+  width: 100%;
+  height: auto;
 }
 
 .experience-url {
@@ -205,6 +272,20 @@ h2 {
   color: var(--blue);
   padding: 0.5em 3em;
   text-decoration: none;
+}
+
+.youtube-container {
+  width: 100%;
+  height: 0;
+  padding-top: 56.25%;
+  position: relative;
+}
+
+.youtube-video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
 }
 
 /* Iint Contact */
@@ -230,6 +311,7 @@ h2 {
 
 .form-email input {
   border: 1px solid gray;
+  border-radius: 5px;
   padding: 0.5em 1em 0.5em 2.5em;
   background-image: url('../images/envelope.svg');
   background-repeat: no-repeat;
@@ -254,13 +336,16 @@ h2 {
 
 .social-link {
   display: inline-block;
-  height: 50px;
-  width: 50px;
+  color: white;
+  /* height: 50px;
+  width: 50px; */
+  font-size: 50px;
   background-size: 50px 50px;
   margin-right: 0.5em;
+  text-decoration: none;
 }
 
-.social-link.twitter {
+/* .social-link.twitter {
   background-image: url('../images/twitter.svg');
 }
 .social-link.facebook {
@@ -271,7 +356,7 @@ h2 {
 }
 .social-link.instagram {
   background-image: url('../images/instagram.svg');
-}
+} */
 /* End Constact*/
 
 /* Init footer */
@@ -318,4 +403,163 @@ h2 {
 
 .contact .left-border{
   background-color: white;
+}
+
+/*Un pixel mas abajo del ipad*/
+@media screen and (max-width: 767px) {
+
+  .burger-menu {
+    display: block;
+  }
+
+  .header, .header ul {
+    display: block;
+  }
+
+  .header a {
+    font-size: 2em;
+    justify-content: center;
+    margin-bottom: 0.5em;
+    padding: 1.5em 0;
+    text-decoration: underline;
+  }
+
+  .header .logo {
+    text-align: center;
+  }
+
+  .menu {
+    align-items: center;
+    background-color: rgba(2, 111, 255, 0.9);
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    left: -100vw;
+    position: fixed;
+    transition: 0.3s;
+    top: 0;
+    width: 100vw;
+    z-index: 2;
+  }
+
+  .menu.is-active {
+    left: 0;
+  }
+
+  .menu ul {
+    height: auto;
+  }
+
+  .hero {
+    position: relative;
+    padding: 3em;
+  }
+
+  h1 {
+    font-size: 2em;
+    z-index: 1;
+    width: auto;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  .hero figure {
+    left: 0;
+    position:absolute;
+    width: auto;
+    height: 100%;
+  }
+
+  .hero figure img {
+    width: 100%;
+  }
+
+  .project {
+    display: block;
+    margin-bottom: 0.7em;
+  }
+
+  .project-details,
+  .project-image {
+    width: auto;
+  }
+
+  .project-image {
+    text-align: center;
+  }
+
+  .experience-items {
+    display: block;
+    padding-bottom: 1em;
+  }
+
+  .experience {
+    width: auto;
+    margin-bottom: 0.7em;
+  }
+
+  .experience:last-child {
+    margin-bottom: 0;
+  }
+
+  .contact-content {
+    display: block;
+    text-align: center;
+  }
+
+  .form-email button {
+    margin: 1em auto;
+  }
+
+  .footer {
+    display: block;
+    text-align: center;
+  }
+
+  .wrapper {
+    flex-wrap: inherit;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+
+  .hero {
+    padding: 1em;
+  }
+
+  h1 {
+    font-size: 1.7em;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 1.3em;
+  }
+
+  .project-details,
+  .experience-content {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .project-details,
+  .experience-content {
+    font-size: 12px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  h2 {
+    font-size: 1em;
+  }
+
+  .social-link {
+    font-size: 40px;
+  }
 }

@@ -2,12 +2,13 @@
 <html lang="es">
   <head>
     <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="css/estilos.css">
     <title>Leonidas Esteban</title>
   </head>
   <body>
-
+    <i class="burger-menu icon-menu" id="burger-menu"></i>
     <!-- Init heade -->
     <header class="header">
       <div class="wrapper">
@@ -92,7 +93,9 @@
             </article>
             <article class="experience">
                 <figure class="experience-image">
-                  <img src="images/platzi-conf.jpg" alt="Imagen de PlatziConf">
+                  <div class="youtube-container">
+                    <iframe class="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/LoKvxCSZw5w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
                 </figure>
                 <div class="experience-content">
                   <h3 class="experience-title">PlatziConf México 2018</h3>
@@ -102,7 +105,7 @@
               </article>
               <article class="experience">
                   <figure class="experience-image">
-                    <img src="images/platzi-conf.jpg" alt="Imagen de PlatziConf">
+                    <video src="https://static.videezy.com/system/resources/previews/000/018/220/original/ICON-VERSION9.mp4" controls></video>
                   </figure>
                   <div class="experience-content">
                     <h3 class="experience-title">PlatziConf México 2018</h3>
@@ -136,10 +139,10 @@
               <button>Enviar</button>
             </form>
             <div class="social">
-              <a href="" class="social-link twitter"></a>
-              <a href="" class="social-link facebook"></a>
-              <a href="" class="social-link github"></a>
-              <a href="" class="social-link instagram"></a>
+              <a href="" class="social-link"><i class="icon-twitter"></i></a>
+              <a href="" class="social-link"><i class="icon-facebook"></i></a>
+              <a href="" class="social-link"><i class="icon-github"></i></a>
+              <a href="" class="social-link"><i class="icon-instagram"></i></a>
             </div>
           </div>
       </div>
@@ -152,5 +155,6 @@
           <div>Designed with 3 by <a href="https://twitter.com/thespianartist">@thespianartist</a></div>
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
