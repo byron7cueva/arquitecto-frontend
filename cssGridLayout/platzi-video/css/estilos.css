@@ -61,21 +61,37 @@ ul {
 }
 
 ol {
-  padding-left: 1em;
+  padding-left: 1.5em;
 }
 
 h3 {
   font-size: 1rem;
-  padding: 0.5rem 0;
+  margin-bottom: 0.8em;
 }
 
 a {
   text-decoration: none;
 }
 
+/*Init container*/
+.container {
+  display: grid;
+  grid-template-columns: 240px 1fr 1fr;
+  grid-template-rows: 70px 1fr 110px 70px 1fr;
+  grid-template-areas: "header video video"
+                       "playlist video video"
+                       "playlist details details"
+                       "playlist comments suggestion"
+                       "fiendplaylist comments suggestion";
+  height: 100vh;
+}
+/*End container*/
+
 /*Init Header*/
 .header {
   background-color: var(--background-color);
+  grid-area: header;
+  padding: 1em 0.7em;
 }
 
 .header h1 {
@@ -94,6 +110,11 @@ a {
 /*End Header*/
 
 /*Playlist*/
+.playlist {
+  grid-area: playlist;
+  padding-left: 0.7em;
+  padding: 1em 2em 1em 0.7em;
+}
 .playlist, .friends-playlist {
   background-color: var(--background-color);
   color: white;
@@ -107,7 +128,16 @@ a {
 .playlist a, .friends-playlist a {
   color: white;
 }
+
+.playlist li {
+  margin-bottom: 10%;
+}
 /*Init Friends Playlist*/
+.friends-playlist  {
+  grid-area: fiendplaylist;
+  padding: 1em 2em 1em 0.7em;
+}
+
 .friends-playlist ul {
   list-style: none;
 }
@@ -120,18 +150,20 @@ a {
   border-radius: 50%;
   margin-right: 0.5em;
   vertical-align: middle;
-  width: 60px;
+  width: 40px;
 }
 /*End Firend playlist*/
 
 /*Init Video*/
 .video {
+  grid-area: video;
   position: relative;
 }
 
 .video video {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
 }
 
 .video .back {
@@ -144,6 +176,10 @@ a {
 /*End Vodeo*/
 
 /*Init Video Details*/
+.video-details {
+  grid-area: details;
+  padding: 0 0.5em;
+}
 
 .video-details h2 {
   font-size: 1.3em;
@@ -152,6 +188,7 @@ a {
 .video-details .views {
   color: gray;
   margin-top: 0;
+  margin-bottom: 0.7em;
 }
 
 .video-options {
@@ -207,6 +244,11 @@ a {
 /*End Video Detasils*/
 
 /*Init Comentaries*/
+.coments {
+  grid-area: comments;
+  padding: 0.5em 0.5em;
+}
+
 .frm-message {
   margin-bottom: 1em;
   position: relative;
@@ -220,7 +262,7 @@ a {
   box-sizing: border-box;
   font-size: 0.9rem;
   padding: 1em 1em 1em 3em;
-  width: 100%;
+  width: 90%;
 }
 
 .frm-message img {
@@ -249,7 +291,7 @@ a {
 .comment img {
   border-radius: 50%;
   margin-right: 1em;
-  width: 60px;
+  width: 40px;
 }
 
 .comment p {
@@ -257,18 +299,67 @@ a {
 }
 /*End Comentaries*/
 /*Init Suggestions*/
-.suggestion figure {
-  width: 100%;
-  max-width: 300px;
+.suggestion-list {
+  grid-area: suggestion;
+  padding: 0.5em 0.5em;
 }
 
 .suggestion figure img {
-  width: 100%;
+  width: 200px;
   object-fit: cover;
 }
 
 .suggestion p {
+  font-size: 0.8em;
   margin: 0;
   margin-bottom: 1em;
 }
 /*End suggestions*/
+
+@media screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 70px 1fr 110px;
+    grid-template-areas: "header header"
+                         "video video"
+                         "details details"
+                         "fiendplaylist playlist"
+                         "comments comments"
+                         "suggestion suggestion";
+    grid-auto-flow: row;
+  }
+
+  .playlist li {
+    margin-bottom: 1em;
+  }
+
+  .video-options .btn-category1 {
+    margin-left: 1em;
+  }
+
+  .frm-message input {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-areas: "header"
+                         "video"
+                         "details"
+                         "playlist"
+                         "fiendplaylist"
+                         "comments"
+                         "suggestion";
+  }
+
+  .video-options {
+    padding-bottom: 0.2em;
+  }
+
+  .video-options a {
+    font-size: 12px;
+    margin-right: 0.5em;
+  }
+}
