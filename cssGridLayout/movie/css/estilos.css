@@ -218,6 +218,12 @@ figure, h1, h2 {
   margin: 0.3em 0 0 0;
 }
 
+@media screen and (max-width: 1024px) {
+  .movies {
+    grid-column-gap: 3px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .header {
     grid-template-columns: 120px 1fr 180px;
@@ -227,15 +233,42 @@ figure, h1, h2 {
     padding-left: initial;
   }
 
-  .movies {
-    grid-column-gap: 3px;
-  }
-
   .movie .details {
     height: 60%;
   }
 
   .details h3 {
     font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .movies {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    grid-auto-rows: 30px 250px 250px 250px;
+  }
+
+  .movies h2 {
+    grid-column-end: span 1;
+  }
+
+  .dashboard {
+    display: block;
+  }
+
+  .options {
+    grid-template-rows: none;
+    grid-template-columns: repeat(3, 60px) 1fr 60px [final];
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    grid-gap:1em;
+    padding: 0.5em 1em;
+  }
+
+  .options a:last-child {
+    grid-row-end: initial;
+    grid-column-end: final;
   }
 }
