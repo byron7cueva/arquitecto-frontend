@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style>
+  body {
+    margin: 0;
+  }
+
+  .container {
+    display: grid;
+    height: 100vh;
+    /*Asignando nombre a las lineas*/
+    grid-template-columns: [inicio] 1fr [line2] 1fr [line3] 1fr [destacado-end] 1fr [line5] 1fr [destacado2-end] 1fr [line7] 1fr [final];
+    /*Asignando nombre a las columnas*/
+    grid-template-rows: [inicio] 200px [line2] 200px [final];
+  }
+
+  .item {
+    background-color: lightblue;
+    border: 1px solid red;
+  }
+
+  .item:nth-of-type(1) {
+    grid-column: inicio / destacado-end;
+    grid-row: inicio / final;
+  }
+
+  .item:nth-of-type(2) {
+    grid-column: destacado-end / destacado2-end;
+    grid-row: inicio / final
+  }
+
+  .item:nth-of-type(3) {
+    grid-column: destacado2-end / final;
+  }
+</style>
+<body>
+  <div class="container">
+    <div class="item">item #1</div>
+    <div class="item">item #2</div>
+    <div class="item">item #3</div>
+    <div class="item">item #4</div>
+    <div class="item">item #5</div>
+  </div>
+</body>
+</html>

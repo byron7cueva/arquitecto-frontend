@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap');
+
+:root {
+  --background-color: #23475b;
+  --background-button-color: #98ca3f;
+  --border-button-color: #6d932b;
+  --border-input-color: #dbdbe2;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  margin: 0;
+}
+
+.hero {
+  background-color: var(--background-color);
+  color: white;
+  display: grid;
+  grid-template-columns: minmax(auto, 1024px);
+  justify-content: center;
+  padding: 1em;
+}
+
+.hero-wrapper {
+  display: grid;
+  grid-template-columns: 70px 1fr 320px;
+  grid-gap: 1em;
+  grid-template-areas: "badge title form"
+                       ". description form"
+                       ". countdown form";
+}
+
+.badge {
+  grid-area: badge;
+  margin: 0;
+}
+
+.badge img {
+  width: 100%;
+}
+
+.title {
+  grid-area: title;
+  margin: 0;
+  font-size: 2em;
+  font-weight: 500;
+  align-self: center;
+}
+
+.description {
+  grid-area: description;
+}
+
+.countdown {
+  grid-area: countdown;
+  text-align: center;
+}
+
+.countdown h3,
+.countdown p {
+  margin: 0;
+}
+
+.countdown h3 {
+  font-weight: normal;
+}
+
+.countdown p {
+  font-weight: normal;
+  font-size: 2em;
+}
+
+.countdown span:after {
+  content: ":";
+  margin: 0 0.2em;
+}
+
+.countdown span:last-child:after {
+  content: none;
+}
+
+.form {
+  grid-area: form;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 1em;
+  text-align: center;
+}
+
+.form h2 {
+  color: #3a3b3f;
+  font-size: 1.3em;
+  margin: 0 0 0.5em 0;
+}
+
+.form input {
+  border: 1px solid var(--border-input-color);
+  box-sizing: border-box;
+  font-family: 16px;
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+  width: 100%;
+}
+
+.form  button {
+  background-color: var(--background-button-color);
+  border: none;
+  border-bottom: 5px solid var(--border-button-color);
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0.5em 1em;
+}
+
+.form input:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-wrapper {
+    grid-template-columns: 70px 1fr;
+    grid-template-areas: "badge title"
+                         "description description"
+                         "form form"
+                         "countdown countdown";
+  }
+}

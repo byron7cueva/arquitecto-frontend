@@ -1,0 +1,25 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 250px);
+  grid-gap: 5px;
+  justify-content: center;
+}
+
+.item {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  margin: 0;
+  padding: 10px;
+}
+
+.item img {
+  max-width: 100%;
+}
+
+.row-3 {
+  grid-row-end: span 3;
+}
+
+.row-2 {
+  grid-row-end: span 2;
+}

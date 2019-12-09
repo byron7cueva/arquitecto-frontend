@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Column Size</title>
+</head>
+<style>
+  body {
+    margin: 0;
+  }
+
+  .container {
+    display: grid;
+    grid-template: repeat(4, 1fr) / repeat(4, 1fr);
+    height: 100vh;
+  }
+
+  .item {
+    background-color: lightblue;
+    border: 1px solid red;
+  }
+
+  .item:nth-of-type(1) {
+    background-color: lightcoral;
+    /*Inicia en la linea 1*/
+    grid-column-start: 1;
+    /*Termina en la linea 3*/
+    grid-column-end: 3;
+  }
+
+  .item:nth-of-type(7) {
+    background-color: lightseagreen;
+    /*Inicia en la linea 2 y termina en la linea 4*/
+    grid-column: 2 / 4;
+
+  }
+
+  .item:nth-of-type(5) {
+    background-color: lightsalmon;
+    /* Inicie en la linea 2 y se espanda dos lineas*/
+    grid-column: 2 / span 2;
+  }
+  .item:nth-child(9) {
+    background-color: lightslategray;
+    /* Inicie desde la linea 1 y ocupe todo el ancho */
+    grid-column: 1 / -1;
+  }
+</style>
+<body>
+  <div class="container">
+    <div class="item">item #1</div>
+    <div class="item">item #2</div>
+    <div class="item">item #3</div>
+    <div class="item">item #4</div>
+    <div class="item">item #5</div>
+    <div class="item">item #6</div>
+    <div class="item">item #7</div>
+    <div class="item">item #8</div>
+    <div class="item">item #9</div>
+    <div class="item">item #10</div>
+    <div class="item">item #11</div>
+    <div class="item">item #12</div>
+  </div>
+</body>
+</html>
