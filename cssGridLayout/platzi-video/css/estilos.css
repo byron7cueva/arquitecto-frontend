@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Amaranth|Open+Sans&display=swap');
+
+@font-face {
+  font-family: 'icons';
+  src:  url('../fonts/icons.eot?tbvfzd');
+  src:  url('../fonts/icons.eot?tbvfzd#iefix') format('embedded-opentype'),
+    url('../fonts/icons.ttf?tbvfzd') format('truetype'),
+    url('../fonts/icons.woff?tbvfzd') format('woff'),
+    url('../fonts/icons.svg?tbvfzd#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-play:before {
+  content: "\f01d";
+}
+.icon-arrow-left:before {
+  content: "\f060";
+}
+.icon-share:before {
+  content: "\f064";
+}
+.icon-download:before {
+  content: "\f0ed";
+}
+
+:root {
+  --background-color: #151B31;
+  --red-color: #FF1314;
+  --violet-color:#9D54FF;
+  --green-color: #14EBBF;
+  --red-dark-color: #E01721;
+  --fuchsia-color: #ED3082;
+  --gray-color: #F2F2F2;
+  --gray-dark-color: #B7B7B7;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  margin: 0;
+}
