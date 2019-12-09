@@ -56,6 +56,14 @@ body, h1, h2, h3, ol, ul, figure {
   margin: 0;
 }
 
+ul {
+  padding:0;
+}
+
+ol {
+  padding-left: 1em;
+}
+
 h3 {
   font-size: 1rem;
   padding: 0.5rem 0;
