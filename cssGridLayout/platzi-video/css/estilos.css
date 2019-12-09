@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Amaranth|Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Amaranth|Open+Sans:300,400&display=swap');
 
 @font-face {
   font-family: 'icons';
@@ -13,7 +13,7 @@
 }
 
 [class^="icon-"], [class*=" icon-"] {
-  font-family: 'icomoon' !important;
+  font-family: 'icons' !important;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -50,5 +50,217 @@
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
+}
+
+body, h1, h2, h3, ol, ul, figure {
   margin: 0;
 }
+
+h3 {
+  font-size: 1rem;
+  padding: 0.5rem 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*Init Header*/
+.header {
+  background-color: var(--background-color);
+}
+
+.header h1 {
+  color: white;
+  font-family: 'Amaranth', sans-serif;
+  font-weight: 300;
+}
+
+.header h1 span {
+  font-family: 'Open Sans', sans-serif;
+  background: linear-gradient(to left right,var(--red-color), white);
+  background: -webkit-linear-gradient(left, var(--red-color), white);
+  -webkit-background-clip: text;  
+  -webkit-text-fill-color: transparent; 
+}
+/*End Header*/
+
+/*Playlist*/
+.playlist, .friends-playlist {
+  background-color: var(--background-color);
+  color: white;
+  font-size: 0.8em;
+}
+
+.playlist ol, .friends-playlist ul {
+  font-weight: lighter;
+}
+
+.playlist a, .friends-playlist a {
+  color: white;
+}
+/*Init Friends Playlist*/
+.friends-playlist ul {
+  list-style: none;
+}
+
+.user-playlist {
+  margin-top: 1em;
+}
+
+.user-playlist img {
+  border-radius: 50%;
+  margin-right: 0.5em;
+  vertical-align: middle;
+  width: 60px;
+}
+/*End Firend playlist*/
+
+/*Init Video*/
+.video {
+  position: relative;
+}
+
+.video video {
+  width: 100%;
+  height: auto;
+}
+
+.video .back {
+  color: white;
+  font-size: 2em;
+  position: absolute;
+  top: 1em;
+  left: 0.5em;
+}
+/*End Vodeo*/
+
+/*Init Video Details*/
+
+.video-details h2 {
+  font-size: 1.3em;
+}
+
+.video-details .views {
+  color: gray;
+  margin-top: 0;
+}
+
+.video-options {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--gray-dark-color);
+  padding-bottom: 0.8em;
+}
+
+.video-options a {
+  margin-right: 1em;
+}
+
+.video-options [class^="btn-"] {
+  border: 1px solid;
+  border-radius: 10px;
+  color: white;
+  font-size: 0.8em;
+  padding: 0.3em 0.7em;
+}
+
+.video-options .btn-add {
+  background-color: var(--red-color);
+}
+
+.video-options .btn-category1 {
+  margin-left: 4em;
+  background-color: var(--violet-color);
+}
+
+.video-options .btn-category2 {
+  background-color: var(--green-color);
+}
+
+.video-options .btn-category3 {
+  background-color: var(--red-dark-color);
+}
+
+.video-options .btn-category4 {
+  background-color: var(--fuchsia-color);
+}
+
+.video-options [class^="button-"] {
+  color: black;
+  display: inline-block;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.video-options [class^="button-"] p {
+  margin: 0;
+}
+/*End Video Detasils*/
+
+/*Init Comentaries*/
+.frm-message {
+  margin-bottom: 1em;
+  position: relative;
+}
+
+.frm-message input {
+  border: none;
+  border-bottom: 1px solid var(--gray-dark-color);
+  border-radius: 3px;
+  background-color: var(--gray-color);
+  box-sizing: border-box;
+  font-size: 0.9rem;
+  padding: 1em 1em 1em 3em;
+  width: 100%;
+}
+
+.frm-message img {
+  border-radius: 50%;
+  position: absolute;
+  left: 0.5em;
+  top: 0.5em;
+  width: 30px;
+}
+
+.frm-message input:focus {
+  outline: none;
+}
+
+.user-comments {
+  list-style: none;
+}
+
+.comment {
+  align-items: center;
+  display: flex;
+  font-size: 0.8em;
+  margin-bottom: 1em;
+}
+
+.comment img {
+  border-radius: 50%;
+  margin-right: 1em;
+  width: 60px;
+}
+
+.comment p {
+  margin: 0;
+}
+/*End Comentaries*/
+/*Init Suggestions*/
+.suggestion figure {
+  width: 100%;
+  max-width: 300px;
+}
+
+.suggestion figure img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.suggestion p {
+  margin: 0;
+  margin-bottom: 1em;
+}
+/*End suggestions*/
