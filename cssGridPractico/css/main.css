@@ -1,19 +1,35 @@
 @import url("./font/flaticon.css") screen;
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto+Slab:400,700|Roboto:400,500,700,900&display=swap');
 
 :root {
   --green-color: #48cfad;
+  --gray-color: #e6e9ed;
+  --black-color: #23282d;
 }
 
 body {
-    font-family: 'Roboto';
+    font-family: 'Roboto mono';
   font-size: 16px;
+  margin: 0;
+}
+
+figure, h3 {
   margin: 0;
 }
 
 a {
   color: black;
   text-decoration: none;
+}
+
+h3 {
+  font-size: 1em;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 100%;
 }
 
 .container {
@@ -59,10 +75,11 @@ a {
     flex-direction: column;
     background-image: url('../assets/img/Cover.png');
     background-size: cover;
-    background-position: center center;
+    background-position: center;
 }
 
 .hero h1 {
+    font-family: 'Roboto Mono', sans-serif;
     font-size: 2.5em;
     letter-spacing: 3px;
     line-height: 1.5em;
@@ -70,7 +87,197 @@ a {
 
 .hero .btn-call-to-action {
     font-size: 0.8em;
-    font-weight: bold;
+    font-weight: 900;
     background-color: var(--green-color);
     padding: 1em 1.5em;
+}
+
+.news-post {
+  background-color: var(--gray-color);
+}
+
+.news-post-container {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto 300px;
+  padding: 0.8em 1.6em 1.6em 1.6em;
+  grid-gap: 0.7em 2em;
+}
+
+.news-post h3 {
+  grid-column: 1 / span 2;
+}
+
+.news-post-image {
+  grid-row: 2;
+}
+
+.news-post-image-container {
+  height: 100%;
+}
+
+.news-post-image-container img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.news-post-description {
+  grid-row: 2;
+}
+
+.news-post-description p {
+  font-size: 0.8em;
+  margin-bottom: 2em;
+}
+
+.blogs-button {
+  border: 1px solid var(--green-color);
+  font-size: 0.7em;
+  padding: 0.8em 1.3em;
+}
+
+.posts-container {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2.5em 1.5em;
+  padding: 1.5em 1.6em 1.6em 1.6em;
+}
+
+.posts-container h3 {
+  grid-column: 1 / span 3;
+  border-bottom: 1px solid #e4e7eb;
+  padding-bottom: 0.5em ;
+  text-align: center;
+}
+
+.post h4 {
+  margin: 0.5em 0;
+}
+
+.post .post-image-container img {
+  width: 100%;
+}
+
+.post p {
+  font-size: 0.8em;
+  margin-top: 0;
+  margin-bottom: 1.5em;
+}
+
+footer {
+  background-color: var(--black-color);
+  border-top: 2em solid var(--green-color);
+  color: white;
+  font-size: 0.7em;
+  padding: 1.5em;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+/*Blog*/
+.post-container-image {
+  margin: 0 1.5em;
+}
+
+.post-container-image img {
+  width: 100%;
+}
+
+.post-container-detail {
+  margin: 0 18%;
+  margin-top: 1em;
+}
+
+.post-container-detail h3 {
+  border-bottom: 1px solid #e4e7eb;
+}
+
+.post-container-detail p {
+  font-size: 0.8em;
+  margin-bottom: 2em;
+}
+
+/*contact*/
+.contact-container {
+  background-color: var(--gray-color);
+  display: flex;
+  justify-content: space-evenly;
+  padding: 3em 3em;
+}
+
+.contact {
+  align-items: center;
+  display: flex;
+}
+
+.contact img {
+  width: 70px;
+  height: auto;
+}
+
+.contact .contact-detail {
+  font-size: 0.9em;
+  margin-left: 1em;
+}
+
+.contact .contact-detail p {
+  font-size: 0.7em;
+}
+
+/*Profile*/
+.profile-container {
+  background-color: var(--gray-color);
+}
+
+.profile-container-content {
+  align-items: center;
+  box-sizing: border-box;
+  display: grid;
+  padding: 3em 1.5em;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 1.5em;
+}
+
+.profile-container .profile-image img {
+  width: 100%;
+}
+
+.profile-details h1 {
+  font-size: 2em;
+  margin-top: 0;
+}
+
+.profile-details p {
+  font-size: 0.8em;
+}
+
+/*Projects*/
+.projects-container {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2em;
+  padding: 3em 1.5em;
+}
+
+.projects-container h3 {
+  grid-column: 1 / span 3;
+  text-align: center;
+  border-bottom: 1px solid #e4e7eb;
+  padding-bottom: 1em;
+  padding-top: 0;
+}
+
+.projects-container .project-container-item h4 {
+  margin-top: 0;
+}
+
+.projects-container .project-container-item p {
+  font-size: 0.7em;
 }
