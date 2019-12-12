@@ -48,10 +48,6 @@ ul {
   padding: 1.1em 1.3em;
 }
 
-.header .header-menu-container li {
-  margin-right: 0.9em;
-}
-
 .header-menu-container a:first-child:hover,
 .header-menu-container a:nth-of-type(2):hover {
   color: var(--dark-gray-color);
@@ -80,10 +76,6 @@ ul {
   width: 47vw;
 }
 
-.main-container .logo {
-  margin-bottom: 1.5em;
-}
-
 .main-container .logo img {
   width: 272px;
 }
@@ -93,7 +85,6 @@ ul {
   border-radius: 30px;
   text-align: left;
   padding: 0 1em;
-  margin-bottom: 3em;
 }
 
 
@@ -133,8 +124,9 @@ ul {
   border-radius: 5px;
   color: var(--dark-gray-color);
   padding: 0.7em 1.5em;
-  margin-right: 1em;
   border: 1px solid transparent;
+  display: inline-block;
+  margin-right: 1em;
 }
 
 .main .search-buttons-container a:hover {
@@ -163,9 +155,5 @@ ul {
   font-size: 1.1em;
   font-weight: 500;
   margin: 0;
-}
-
-.footer .footer-options li {
-  margin-right: 1.8em;
 }
 /*End footer*/

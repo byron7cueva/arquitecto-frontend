@@ -1,0 +1,69 @@
+@import url('./estilos.css');
+
+ul {
+  display: grid;
+  align-items: center;
+  grid-auto-flow: column;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-auto-flow: column;
+  height: 100vh;
+}
+
+/*Init Header*/
+.header {
+  display: grid;
+  justify-items: end;
+  padding-right: 2.2em;
+}
+
+.header-menu-container {
+  grid-gap: 0.9em;
+}
+/*End Header*/
+
+/*Init Main*/
+.main {
+  align-self: center;
+  justify-self: center;
+}
+
+.main-container {
+  display: grid;
+  grid-gap: 1.5em;
+}
+
+.search-input-container {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-auto-flow: column;
+  align-items: center;
+}
+/* End Main*/
+
+/*Init Footer*/
+.footer {
+  padding-right: 2.2em;
+}
+
+.footer .footer-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10%;
+}
+
+.footer .footer-options ul {
+  grid-gap: 1em;
+}
+
+.footer .footer-options ul:first-child {
+  justify-self: start;
+}
+
+.footer .footer-options ul:last-child {
+  justify-self: end;
+}
+/*End Footer*/

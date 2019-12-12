@@ -1,4 +1,5 @@
 @import url('./estilos.css');
+@import url('./margin.css');
 
 body {
   display: flex;
@@ -11,12 +12,15 @@ ul {
   display: flex;
 }
 
+/*Init Header*/
 .header {
   display: flex;
   justify-content: flex-end;
   flex: 0 0;
 }
+/*End Header*/
 
+/*Init Main*/
 .main {
   align-items: center;
   display: flex;
@@ -36,7 +40,9 @@ ul {
 .search-input-container .searh-icon {
   flex: 0 0;
 }
+/*End Main*/
 
+/*Init Footer*/
 .footer {
   justify-self: flex-end;
 }
@@ -46,4 +52,4 @@ ul {
   justify-content: space-between;
   flex: 0 0;
 }
-
+/*End Footer*/
