@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'icons';
+  src:  url('../assets/fonts/icons.eot?c5ont');
+  src:  url('../assets/fonts/icons.eot?c5ont#iefix') format('embedded-opentype'),
+    url('../assets/fonts/icons.ttf?c5ont') format('truetype'),
+    url('../assets/fonts/icons.woff?c5ont') format('woff'),
+    url('../assets/fonts/icons.svg?c5ont#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+:root {
+  --light-gray-color: #f2f2f2;
+  --gray-color: #e4e4e4;
+  --dark-gray-color: #5f6368;
+  --border-gray-color: #dfe1e5;
+}
+
+body {
+  margin: 0;
+  font-family: arial, sans-serif;
+  font-size: 13px;
+}
