@@ -43,19 +43,9 @@ ul {
   padding: 0;
 }
 
-li {
-  display: inline-block;
-}
-
 /*Init Header*/
 .header {
-  overflow: auto;
   padding: 1.1em 1.3em;
-}
-
-.header .header-menu {
-  display: inline-block;
-  float: right;
 }
 
 .header .header-menu-container li {
@@ -69,13 +59,11 @@ li {
 
 .header .header-menu-container img {
   border-radius: 50%;
-  vertical-align: middle;
   width: 32px;
 }
 
 .header-menu-container .menu-icon {
   text-decoration: none;
-  vertical-align: middle;
 }
 
 .header-menu-container .menu-icon:before {
@@ -83,18 +71,11 @@ li {
   content: "\e900";
   font-family: 'icons';
   font-size: 2.5em;
-  line-height: 1em;
 }
 /*End Header*/
 
 /*Init Main*/
-.main {
-  height: 57vh;
-  padding-top: 17vh;
-}
-
 .main .main-container {
-  margin: 0 auto;
   text-align: center;
   width: 47vw;
 }
@@ -115,6 +96,7 @@ li {
   margin-bottom: 3em;
 }
 
+
 .main-container .search-input-container:hover {
   box-shadow: 0px 0px 5px 1px var(--gray-color);
 }
@@ -123,7 +105,6 @@ li {
   border: none;
   outline: none;
   padding: 1em 0;
-  width: 76%;
 }
 
 .search-input-container .searh-icon:before {
@@ -131,14 +112,10 @@ li {
   content: "\e901";
   font-family: 'icons';
   font-size: 20px;
-  vertical-align: middle;
 }
 
 .search-input-container .micro-container {
-  float: right;
-  display: inline-block;
   border-left: 1px solid var(--border-gray-color);
-  margin-top: 0.7em;
   padding-left: 2%;
 }
 
@@ -170,9 +147,6 @@ li {
 /*Init footer*/
 .footer {
   background-color: var(--light-gray-color);
-  position: fixed;
-  bottom: 0;
-  width: 100%;
 }
 
 .footer a {
@@ -189,18 +163,6 @@ li {
   font-size: 1.1em;
   font-weight: 500;
   margin: 0;
-}
-
-.footer .footer-options {
-  overflow: auto;
-}
-
-.footer .footer-options ul {
-  display: inline-block;
-}
-
-.footer .footer-options ul:last-child {
-  float: right;
 }
 
 .footer .footer-options li {

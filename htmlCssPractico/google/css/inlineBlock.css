@@ -1,0 +1,72 @@
+@import url('./estilos.css');
+li {
+  display: inline-block;
+}
+
+/*Init Header*/
+.header {
+  overflow: auto;
+}
+
+.header .header-menu {
+  display: inline-block;
+  float: right;
+}
+
+.header .header-menu-container img {
+  vertical-align: middle;
+}
+
+.header-menu-container .menu-icon {
+  vertical-align: middle;
+}
+
+.header-menu-container .menu-icon:before {
+  line-height: 1em;
+}
+/*End Header*/
+
+/*Init Main*/
+.main {
+  height: 57vh;
+  padding-top: 17vh;
+}
+
+.main .main-container {
+  margin: 0 auto;
+}
+
+.search-input-container input {
+  width: 76%;
+}
+
+.search-input-container .searh-icon:before {
+  vertical-align: middle;
+}
+
+.search-input-container .micro-container {
+  float: right;
+  display: inline-block;
+  margin-top: 0.7em;
+}
+/*End Main*/
+
+/*Init footer*/
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer .footer-options {
+  overflow: auto;
+}
+
+.footer .footer-options ul {
+  display: inline-block;
+}
+
+.footer .footer-options ul:last-child {
+  float: right;
+}
+/*End footer*/

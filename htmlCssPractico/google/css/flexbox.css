@@ -1,0 +1,49 @@
+@import url('./estilos.css');
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+ul {
+  align-items: center;
+  display: flex;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  flex: 0 0;
+}
+
+.main {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex: 1 1;
+}
+
+.search-input-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-input-container input {
+  flex: 1 1;
+}
+
+.search-input-container .searh-icon {
+  flex: 0 0;
+}
+
+.footer {
+  justify-self: flex-end;
+}
+
+.footer .footer-options {
+  display: flex;
+  justify-content: space-between;
+  flex: 0 0;
+}
+
