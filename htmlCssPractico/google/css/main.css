@@ -15,6 +15,7 @@
   --gray-color: #e4e4e4;
   --dark-gray-color: #5f6368;
   --border-gray-color: #dfe1e5;
+  --boder-button-color: #c6c6c6;
 }
 
 body {
@@ -22,3 +23,187 @@ body {
   font-family: arial, sans-serif;
   font-size: 13px;
 }
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+figure {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+}
+
+/*Init Header*/
+.header {
+  overflow: auto;
+  padding: 1.1em 1.3em;
+}
+
+.header .header-menu {
+  display: inline-block;
+  float: right;
+}
+
+.header .header-menu-container li {
+  margin-right: 0.9em;
+}
+
+.header-menu-container a:first-child:hover,
+.header-menu-container a:nth-of-type(2):hover {
+  color: var(--dark-gray-color);
+}
+
+.header .header-menu-container img {
+  border-radius: 50%;
+  vertical-align: middle;
+  width: 32px;
+}
+
+.header-menu-container .menu-icon {
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.header-menu-container .menu-icon:before {
+  color: var(--dark-gray-color);
+  content: "\e900";
+  font-family: 'icons';
+  font-size: 2.5em;
+  line-height: 1em;
+}
+/*End Header*/
+
+/*Init Main*/
+.main {
+  height: 57vh;
+  padding-top: 17vh;
+}
+
+.main .main-container {
+  margin: 0 auto;
+  text-align: center;
+  width: 47vw;
+}
+
+.main-container .logo {
+  margin-bottom: 1.5em;
+}
+
+.main-container .logo img {
+  width: 272px;
+}
+
+.main-container .search-input-container {
+  border: 1px solid var(--border-gray-color);
+  border-radius: 30px;
+  text-align: left;
+  padding: 0 1em;
+  margin-bottom: 3em;
+}
+
+.main-container .search-input-container:hover {
+  box-shadow: 0px 0px 5px 1px var(--gray-color);
+}
+
+.search-input-container input {
+  border: none;
+  outline: none;
+  padding: 1em 0;
+  width: 76%;
+}
+
+.search-input-container .searh-icon:before {
+  color: #9AA0A6;;
+  content: "\e901";
+  font-family: 'icons';
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+.search-input-container .micro-container {
+  float: right;
+  display: inline-block;
+  border-left: 1px solid var(--border-gray-color);
+  margin-top: 0.7em;
+  padding-left: 2%;
+}
+
+.search-input-container .micro-icon {
+  display: inline-block;
+  background-image: url('../assets/img/googlemic_color_24dp.png');
+  background-size: contain;
+  width: 24px;
+  height: 24px;
+}
+
+.main .search-buttons-container a {
+  font-size: 1.1em;
+  background-color: var(--light-gray-color);
+  border-radius: 5px;
+  color: var(--dark-gray-color);
+  padding: 0.7em 1.5em;
+  margin-right: 1em;
+  border: 1px solid transparent;
+}
+
+.main .search-buttons-container a:hover {
+  color: black;
+  text-decoration: none;
+  border-color: var(--boder-button-color);
+}
+/*End Main*/
+
+/*Init footer*/
+.footer {
+  background-color: var(--light-gray-color);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer a {
+  color: var(--dark-gray-color);
+}
+
+.footer  div {
+  border-top: 1px solid var(--border-gray-color);
+  color: var(--dark-gray-color);
+  padding: 0.95em 0 0.95em 2.2em;
+}
+
+.footer .footer-region p {
+  font-size: 1.1em;
+  font-weight: 500;
+  margin: 0;
+}
+
+.footer .footer-options {
+  overflow: auto;
+}
+
+.footer .footer-options ul {
+  display: inline-block;
+}
+
+.footer .footer-options ul:last-child {
+  float: right;
+}
+
+.footer .footer-options li {
+  margin-right: 1.8em;
+}
+/*End footer*/
