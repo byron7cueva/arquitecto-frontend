@@ -26,23 +26,108 @@
       border-radius: 3px;
       box-shadow: inset 0 -3px 0px rgba(0,0,0,0.2);
       color: white;
+      cursor: pointer;
+      outline: none;
       padding: 0.5em 1em;
+      transition: 0.3s;
+    }
+
+    .btn:active {
+      transform: scale(0.9);
     }
 
     .notification {
+      align-items: center;
       color: white;
+      display: flex;
+      justify-content: center;
+      margin: 0 1em;
+      width: 2.5em;
+      height: 2em;
     }
 
     .notification::before {
       font-family: 'Font Awesome 5 Free';
       content: "\f0f3";
+      transform-origin: center top;
+    }
+
+    .notification::after {
+      align-self: flex-start;
+      align-items: center;
+      background-color: orangered;
+      border-radius: 50%;
+      content: attr(data-count);
+      display: flex;
+      font-size: 0.7em;
+      font-weight: bold;
+      height: 1.5em;
+      justify-content: center;
+      min-width: 1.5em;
+      opacity: 0;
+      transform: scale(0.5);
+      transition: 1s;
+    }
+
+    .notification.bell::before {
+      animation-name: bell;
+      animation-duration: 1s;
+    }
+
+    .notification.notification.is-notified::after {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    @keyframes bell {
+      0% {
+        transform: rotate(-35deg);
+      }
+      15%{
+        transform: rotate(35deg);
+      }
+      30% {
+        transform: rotate(-20deg)
+      }
+      45%{
+        transform: rotate(15deg);
+      }
+      60%{
+        transform: rotate(-10deg);
+      }
+      75%{
+        transform: rotate(5deg);
+      }
+      100% {
+        transform: rotate(0);
+      }
     }
   </style>
 </head>
 <body>
   <header class="header">
-    <button class="btn">Recibir notificacion</button>
-    <div class="notification"></div>
+    <button class="btn" id="notificated">Recibir notificacion</button>
+    <div class="notification" id="notification"></div>
   </header>
+  <script>
+    const $btnNotificated = document.getElementById('notificated');
+    const $notification = document.getElementById('notification');
+
+    $btnNotificated.addEventListener('click', () => {
+      $notification.classList.add('bell');
+
+      let numNotifications = Number($notification.getAttribute('data-count') || 0);
+      $notification.setAttribute('data-count', numNotifications + 1);
+
+      if(!$notification.classList.contains('is-notified'))
+        $notification.classList.add('is-notified');
+    });
+
+    $notification.addEventListener('animationend', (event) => {
+      if(event.animationName === 'bell') {
+        $notification.classList.remove('bell');
+      }
+    });
+  </script>
 </body>
 </html>
