@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Notificacion</title>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
   <style>
     body {
       font-family: 'Arial';
@@ -16,7 +17,25 @@
       justify-content: flex-end;
       align-items: center;
       padding: 1em;
-      background-color: lightcoral;
+      background-color: lightslategray
+    }
+
+    .btn {
+      background-color: limegreen;
+      border: none;
+      border-radius: 3px;
+      box-shadow: inset 0 -3px 0px rgba(0,0,0,0.2);
+      color: white;
+      padding: 0.5em 1em;
+    }
+
+    .notification {
+      color: white;
+    }
+
+    .notification::before {
+      font-family: 'Font Awesome 5 Free';
+      content: "\f0f3";
     }
   </style>
 </head>
