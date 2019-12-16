@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Animation JavaScript</title>
+  <style>
+    body {
+      align-items: center;
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+    }
+
+    .container {
+      border: 1px solid lightcoral;
+      width: 700px;
+    }
+
+    .circulo {
+      align-items: center;
+      background-color: lightseagreen;
+      border-radius: 50%;
+      display: flex;
+      height: 200px;
+      justify-content: center;
+      width: 200px;
+    }
+
+    .controls {
+      border-top: 1px solid lightcoral;
+      display: flex;
+      justify-content: center;
+      margin: 1em 0;
+      padding-top: 1em;
+    }
+
+    .btn {
+      background-color: lightgreen;
+      border: none;
+      border-radius: 5px;
+      box-shadow: inset 0 -0.2em rgb(0,0,0,0.2);
+      cursor: pointer;
+      margin-left: 0.5em;
+      padding: 0.5em 1em;
+      outline: none;
+      transition: 0.3s;
+      transition-property: transform;
+      will-change: transform;
+    }
+
+    .btn:active {
+      transform: scale(0.9);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="circulo" class="circulo">
+      Hola
+    </div>
+    <div class="controls">
+      <button class="btn" id="play">Play</button>
+      <button class="btn" id="pause">Pause</button>
+      <button class="btn" id="stop">Stop</button>
+      <button class="btn" id="reverse">Reverse</button>
+    </div>
+  </div>
+  <script>
+    const $circulo = document.getElementById('circulo');
+    const animation = $circulo.animate([
+      {
+        transform: 'translateX(0)'
+      },
+      {
+        transform: 'translateX(500px)'
+      }
+    ], {
+      duration: 2000,
+      direction: 'normal',
+      easing: 'linear',
+      iterations: Infinity,
+      //fill: 'forwards',
+      iterationStart: 0.5 //Empieza desde la mitad de la anumacion
+    });
+
+    //Controlando la animacion
+    const $btnPlay = document.getElementById('play');
+    const $btnPause = document.getElementById('pause');
+    const $btnStop = document.getElementById('stop');
+    const $btnReverse = document.getElementById('reverse');
+
+    $btnPlay.addEventListener('click', (event) => {
+      animation.play();
+    });
+
+    $btnPause.addEventListener('click', (event) => {
+      animation.pause();
+    });
+
+    $btnStop.addEventListener('click', (event) => {
+      animation.cancel();
+    });
+
+    $btnReverse.addEventListener('click', (event) => {
+      animation.reverse();
+    });
+  </script>
+</body>
+</html>

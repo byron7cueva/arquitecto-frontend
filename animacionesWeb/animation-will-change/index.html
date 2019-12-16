@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Animation will change</title>
+</head>
+<style>
+  body {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+  }
+
+  .container {
+    border: 1px solid lightsalmon;
+    width: 100%;
+  }
+
+  .circulo {
+    align-items: center;
+    background-color: lightseagreen;
+    border-radius: 50%;
+    display: flex;
+    cursor: pointer;
+    height: 200px;
+    justify-content: center;
+    position: relative;
+    width: 200px;
+    transition: 1s;
+    will-change: opacity, transform;
+  }
+
+  .circulo:hover {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+
+</style>
+<body>
+  <div class="container">
+    <div class="circulo">
+      Hola
+    </div>
+  </div>
+</body>
+</html>

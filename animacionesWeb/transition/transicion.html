@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pelota</title>
+  <style>
+    .pelota {
+      background-color: red;
+      border-radius: 50%;
+      height: 100px;
+      width: 100px;
+      /*Propiedades a las cules se va agregar la animacion en la transicion*/
+      /*transition-property: width, height;*/
+      /*Duracion de la transicion*/
+      /* transition-duration: 1s; */
+      /*Tiempo de espera para que la transicion se dispare*/
+      /* transition-delay: 1s; */
+      /*Aceleracion de la transicion*/
+      /* transition-timing-function: ease; */
+      /*Resumir la aplicacion de la transicion anterior*/
+      /* transition: width 1s 1s ease; */
+      transition: width 1s ease;
+    }
+
+    .pelota:hover {
+      height: 200px;
+      width: 200px;
+    }
+  </style>
+</head>
+<body>
+  <div class="pelota"></div>
+</body>
+</html>

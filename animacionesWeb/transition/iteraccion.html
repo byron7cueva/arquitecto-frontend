@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Iteraccion</title>
+</head>
+<style>
+  body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .canasta {
+    border: 1px solid lightblue;
+    position: relative;
+    height: 100px;
+    width: 100%;
+  }
+
+  .canasta:hover .pelota.a {
+    left: calc(50% - 100px);
+  }
+
+  .canasta:hover .pelota.b {
+    right: calc(50% - 100px);
+  }
+
+  .pelota {
+    align-items: center;
+    border-radius: 50%;
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    position: absolute;
+    width: 100px;
+    transition: 1s ease;
+  }
+
+  .pelota.a {
+    background-color: lightcoral;
+    left: 0;
+  }
+
+  .pelota.b {
+    background-color: lightseagreen;
+    right: 0;
+  }
+</style>
+<body>
+  <div class="canasta">
+    <div class="pelota a">Hola</div>
+    <div class="pelota b">Mundo</div>
+  </div>
+</body>
+</html>

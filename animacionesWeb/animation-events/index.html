@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Animacion</title>
+</head>
+<style>
+  body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .container {
+    border: 1px solid lightcoral;
+    width: 100%;
+    height: 200px;
+  }
+
+  .container:hover .circulo {
+    animation-play-state: paused;
+  }
+
+  .circulo {
+    align-items: center;
+    background-color: lightgreen;
+    border-radius: 50%;
+    display: flex;
+    height: 200px;
+    justify-content: center;
+    width: 200px;
+    position: relative;
+    animation-name: animacionCirculo, rebote;
+    animation-duration: 3s, 300ms;
+    animation-iteration-count: infinite, 20;
+    animation-direction: alternate;
+    animation-timing-function: linear, ease-in-out;
+  }
+
+  @keyframes animacionCirculo {
+    0% {
+      /* opacity: 1; */
+      left:0;
+    }
+    100% {
+      /* opacity: 0; */
+      left: calc(100% - 200px);
+    }
+  }
+
+  @keyframes rebote {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(100px) scale(1, 0.9);
+    }
+  }
+
+  @keyframes escalera {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(100px);
+    }
+  }
+</style>
+<body>
+  <div class="container">
+    <div id="circulo" class="circulo">
+      Hola
+    </div>
+  </div>
+  <script>
+    const $circulo = document.getElementById('circulo');
+    $circulo.addEventListener('animationend', (event) => {
+      if(event.animationName === 'rebote') {
+        $circulo.style.animationName = 'animacionCirculo, escalera';
+        $circulo.style.animationDuration = '3s, 3s';
+        $circulo.style.animationIterationCount = 'infinite, 4';
+        $circulo.style.animationDirection = 'alternate, normal';
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Transformacion de translacion</title>
+  <style>
+    body {
+      align-items: center;
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      font-family: Arial;
+      color: white;
+    }
+
+    .container {
+      border:1px solid lightcoral;
+    }
+
+    .container:hover .cuadrado {
+      /* Aumentando el doble de su tamano tanto en alto como en ancho. */
+      /* transform: scale(2); */
+      /* Disminuyendo a la mitad de su tamano en alto y ancho */
+      /* transform: scale(0.5); */
+      /* Aumentando el doble de su ancho y disminuyendo a la mitad de su alto */
+      transform: scale(2, 0.5);
+    }
+
+    .cuadrado {
+      align-items: center;
+      background-color: lightseagreen;
+      display: flex;
+      height: 200px;
+      justify-content: center;
+      margin: 10px;
+      width: 200px;
+      transition: 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="cuadrado">
+      Hola mundo
+    </div>
+  </div>
+</body>
+</html>

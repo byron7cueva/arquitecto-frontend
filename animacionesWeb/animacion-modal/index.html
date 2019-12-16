@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Animacion modal</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .overlay {
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      bottom: 0;
+      display: flex;
+      justify-content: center;
+      left: 0;
+      position: fixed;
+      right: 0;
+      top: 0;
+      height: 100%;
+      opacity: 0;
+      transition: 1.1s ease-in-out;
+      /*Quitar de la zona clicleable*/
+      visibility: hidden;
+    }
+
+    .overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal {
+      border-radius: 1em;
+      background-color: white;
+      width: 500px;
+      padding: 2em;
+      text-align: center;
+      position: relative;
+
+      animation-name: modalIn;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+    }
+
+    .modal h2 {
+      margin: 0;
+    }
+
+    .close-modal {
+      background-color: lightcoral;
+      border: none;
+      border-radius: 50%;
+      color: white;
+      cursor: pointer;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      right: 0.5em;
+      top: 0.5em;
+      outline: none;
+    }
+
+    .btn {
+      background-color: lightgray;
+      border: none;
+      border-radius: 5px;
+      box-shadow: inset 0 -0.2em rgb(0,0,0,0.2);
+      color: white;
+      cursor: pointer;
+      margin-left: 0.5em;
+      padding: 0.5em 1em;
+      outline: none;
+      transition: 0.3s;
+      transition-property: transform;
+      will-change: transform;
+      margin-top: 0.5em;
+    }
+
+    .btn.primary {
+      background-color: #7dc900;
+    }
+
+    .btn.warning {
+      background-color: lightcoral;
+    }
+
+    @keyframes modalIn {
+      0% {
+        transform: translateY(-60vh);
+      }
+      25% {
+        transform: translateY(25px);
+      }
+      75% {
+        transform: translateY(-20px);
+      }
+      100% {
+        transform: translateY(5px);
+      }
+    }
+
+    @keyframes modalOut {
+      0% {
+        transform: translateY(5px);
+      }
+      25% {
+        transform: translateY(-20px);
+      }
+      75% {
+        transform: translateY(25px);
+      }
+      100% {
+        transform: translateY(-60vh);
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="btn primary" id="show-modal">Ver Modal</button>
+  <div class="overlay active" id="overlay">
+    <div class="modal" id="modal">
+      <button class="close-modal warning">x</button>
+      <h2>Estas a punto de crear una ventana modal muy chever</h2>
+      <p>Te gusto?</p>
+      <button class="btn primary" id="aceptar">Si esta chida</button>
+      <button class="btn warning" id="cancel">No :(</button>
+    </div>
+  </div>
+  <script>
+    const $modal = document.getElementById('modal');
+    const $btnAceptar = document.getElementById('aceptar');
+    const $overlay = document.getElementById('overlay');
+    const $btnClose = document.querySelectorAll('.warning');
+    const $btnShowModal = document.getElementById('show-modal');
+
+    $btnAceptar.addEventListener('click', hideModal);
+
+    $btnClose.forEach(($btn) => {
+      $btn.addEventListener('click', hideModal);
+    });
+
+    $btnShowModal.addEventListener('click', () => {
+      $overlay.classList.add('active');
+      $modal.style.animationName = 'modalIn';
+      $modal.style.animationDuration = '1s';
+    });
+
+    function hideModal(show) {
+      $modal.style.animationName = 'modalOut';
+      $modal.style.animationDuration = '1s';
+      $overlay.classList.remove('active')
+    }
+  </script>
+</body>
+</html>

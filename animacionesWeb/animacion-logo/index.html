@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Logo</title>
+  <style>
+    body {
+      align-items: center;
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      background-color: lightslategrey;
+    }
+
+    .logo {
+      animation-name: platzi-base;
+      animation-duration: 3.5s;
+      animation-iteration-count: infinite;
+      height: 100px;
+      transform: rotate(45deg);
+      width: 100px;
+    }
+
+    .logo-left, .logo-right {
+      border: 20px solid #7dc900;
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    .logo-left {
+      animation-name: platzi-left;
+      animation-duration: 3.5s;
+      animation-iteration-count: infinite;
+      animation-delay: 1.5s;
+      border-bottom: none;
+      border-radius: 20px 20px 0 0;
+      height: 65%;
+      position: relative;
+      top: 1px;
+    }
+
+    .logo-right {
+      border-top: none;
+      border-radius: 0 0 20px 20px;
+      height: 35%;
+    }
+
+    @keyframes platzi-base {
+      0% {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.3);
+      }
+      30% {
+        opacity: 1;
+        transform: rotate(405deg) scale(0.8);
+      }
+      80% {
+        opacity: 1;
+        transform: rotate(405deg) scale(0.8);
+      }
+      100% {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.3);
+      }
+    }
+
+    @keyframes platzi-left {
+      0% {
+        width: 100%;
+      }
+      25% {
+        width: 80%;
+      }
+      50% {
+        width: 80%;
+      }
+      75% {
+        width: 100%;
+      }
+      100% {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <div class="logo-left"></div>
+    <div class="logo-right"></div>
+  </div>
+</body>
+</html>
