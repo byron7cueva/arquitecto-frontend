@@ -51,7 +51,7 @@
 }
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Source Sans Pro', system-ui;
   font-size: 16px;
 }
 
@@ -61,7 +61,7 @@ body, figure, ul {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Fjalla One', sans-serif;
+  font-family: 'Fjalla One', system-ui;
 }
 
 h1 {
@@ -78,7 +78,7 @@ h1  strong {
 
 h2 {
   color: var(--blue);
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Source Sans Pro', system-ui;
   font-size: 1.5em;
   font-weight: bold;
   margin: 0 1.3em 1em 1.3em;
@@ -216,7 +216,7 @@ h2 {
 }
 
 .project strong {
-  font-family: 'Fjalla One', sans-serif;
+  font-family: 'Fjalla One', system-ui;
 }
 
 /*End portfolio*/
