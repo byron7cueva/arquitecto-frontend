@@ -1,0 +1,20 @@
+//Estilos a botones
+.btn {
+  display: inline-block;
+  line-height: 2.2em;
+  color: @buttontxt;
+  background-color: @buttonbg;
+  text-align: center;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  padding: 0 1em;
+  //Anidando con el simbolo & (Referencia al padre)
+  &:hover {
+    text-decoration: none;
+  }
+  //Modifier de BEM
+  &--alert {
+    background-color: @color-alert;
+  }
+}
