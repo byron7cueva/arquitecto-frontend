@@ -1,0 +1,8 @@
+{
+  "liveServer": {
+    "settings"  : {
+      "root": "public/",
+      "port": 8080
+    }
+  }
+}
