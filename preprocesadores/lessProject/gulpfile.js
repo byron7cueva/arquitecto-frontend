@@ -30,4 +30,12 @@ function watchTask() {
   watch('src/**/*.less', compileLess);
 }
 
-exports.default = series(compilePug, compileLess, watchTask);
+/**
+ * Copiar assets
+ */
+function copyAssets() {
+  return src('src/assets/**/*')
+    .pipe(dest('public/assets/'));
+}
+
+exports.default = series(compilePug, compileLess, copyAssets, watchTask);
