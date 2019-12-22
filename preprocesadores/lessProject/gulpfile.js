@@ -31,7 +31,7 @@ function watchTask() {
 }
 
 /**
- * Copiar assets
+ * Copy assets
  */
 function copyAssets() {
   return src('src/assets/**/*')
