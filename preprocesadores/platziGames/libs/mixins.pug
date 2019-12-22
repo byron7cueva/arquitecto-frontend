@@ -1,0 +1,6 @@
+mixin mix_caja(caja)
+  .caja
+    .caja__imagen: img(src="images/" + caja.image)
+    .caja__contenido
+      h3 #{caja.titulo}
+      p #{caja.content}
