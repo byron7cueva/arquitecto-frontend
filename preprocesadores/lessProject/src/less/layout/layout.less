@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 1em;
+  font-family: @font-content;
+  font-size: @font-size-base;
+  background-color: @color-light;
+  .body-dark-mode(@dark-mode);
+}
+
+.body-dark-mode(@mode) when (@mode = true) {
+  background-color: @color-primary;
+  color: @color-light;
+}

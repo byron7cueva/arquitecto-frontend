@@ -1,0 +1,58 @@
+.intro {
+  height: 400px;
+  width: 100%;
+  position: relative;
+  .box-shadow;
+  &__image {
+    height: calc(100% - 1em);
+    width: calc(100% - 1em);
+    position: absolute;
+    top: 0.5em;
+    left: 0.5em;
+    right: 0.5em;
+    bottom: 0.5em;
+    object-fit: cover;
+  }
+  &__content {
+    height: 100%;
+    color: @color-light;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    .container-centered;
+    .upperStrong;
+    > div {
+      width: 75%;
+    }
+    h1, p {
+      margin: 0;
+    }
+    h1 {
+      .font-title;
+    }
+    p {
+      font-size: 0.5em;
+      color: fade(@color-light, 50%);
+    }
+  }
+  &__author {
+    .container-centered;
+    img {
+      margin-right: 0.5em;
+      width: 50px;
+      border-radius: 50%;
+    }
+    p {
+      text-align: left;
+    }
+    &-name {
+      display: block;
+      color: fade(@color-light, 100%);
+    }
+  }
+  .intro-dark-mode(@dark-mode);
+}
+
+.intro-dark-mode(@mode) when (@mode = true) {
+  background-color: @color-secundary;
+}

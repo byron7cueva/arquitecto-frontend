@@ -26,16 +26,16 @@ function compileLess() {
  * Wacth change files
  */
 function watchTask() {
-  watch(['src/index.pug', 'views/**/*.pug'], compilePug);
+  watch(['src/index.pug', 'src/pug/**/*.pug'], compilePug);
   watch('src/**/*.less', compileLess);
 }
 
 /**
  * Copy assets
  */
-function copyAssets() {
-  return src('src/assets/**/*')
-    .pipe(dest('public/assets/'));
+function copyImages() {
+  return src('src/images/*')
+    .pipe(dest('public/images/'));
 }
 
-exports.default = series(compilePug, compileLess, copyAssets, watchTask);
+exports.default = series(compilePug, compileLess, copyImages, watchTask);

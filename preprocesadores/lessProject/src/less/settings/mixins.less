@@ -1,0 +1,45 @@
+.container-centered() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.font-title() {
+  font-family: @font-title;
+  color: @color-light;
+  .relative-font(0.9em);
+}
+
+.font-subtitle() {
+  .relative-font(0.2em);
+}
+
+.font-title-article() {
+  .relative-font(0);
+}
+
+.paragraph() {
+  .relative-font(-0.1em);
+}
+
+.upperStrong() {
+  font-family: @font-title;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0.3em 0;
+}
+
+.relative-font(@diference-font) {
+  font-size: 1em + @diference-font;
+  line-height: 1.2em;
+}
+
+.link() {
+  color: @color-variant;
+  .relative-font(0);
+  .upperStrong;
+}
+
+.box-shadow() {
+  box-shadow: 0px 5px 15px 0px fade(@color-primary, 50%);
+}
