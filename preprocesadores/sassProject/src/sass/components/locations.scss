@@ -1,0 +1,20 @@
+.location-profile {
+  padding-left: 3em;
+  text-align: left;
+  @extend %block-section;
+  i {
+    margin-top: 0.3em;
+    margin-right: 0.3em;
+    display: block;
+    float: left;
+    font-size: relativeFont(1em);
+    color: $color-variant;
+  }
+  h2 {
+    @include title($font-family-title);
+  }
+  h3 {
+    color: get-opacity($color-primary, 0.5);
+    @include title($font-family-title);
+  }
+}

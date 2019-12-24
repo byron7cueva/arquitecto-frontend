@@ -1,0 +1,39 @@
+include pug/contents/variables.pug
+include pug/components/mixins.pug
+
+doctype html
+html
+  head
+    title Platzi Games
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no")
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i|Oswald:400,500,600,700&display=swap")
+    link(rel="stylesheet", href="css/main.css")
+    script(src="https://kit.fontawesome.com/552ebddad2.js")
+  body
+    main
+      section.profile
+        img(class="profile__avatar" src="images/avatar.jpg")
+        h2.profile__name John Wick
+        h3.profile__title Asesino Legendario
+        a(class="profile__button" href="#") Seguir
+        .statistics-profile
+          each statisticItem in profileStatistics
+            +statistic(statisticItem)
+        .profile__bio
+          h2 Acerca de Mi
+          h3 Asesino a sueldo retirado y amante de perros
+        .location-profile
+          i.fas.fa-map-marker-alt
+          h2 Estados Unidos
+          h3 227km Cerca
+        .galery-profile
+          h2 Mis Fotos
+          img.primary-photo(src="images/galeria1.jpg")
+          img(src="images/galeria2.jpg")
+          img(src="images/galeria3.jpg")
+          img(src="images/galeria4.jpg")
+      aside.articles
+        each articleItem in articles
+          +article(articleItem)

@@ -1,0 +1,15 @@
+@mixin title($font-family) {
+  @if $font-family == $font-family-title {
+    font-family: $font-family-title;
+    text-transform: uppercase;
+  } @else {
+    font-family: $font-family-content;
+  }
+}
+
+@mixin centerContainer($size) {
+  max-width: $size;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}

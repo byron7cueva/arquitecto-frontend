@@ -1,0 +1,56 @@
+@mixin profile-mode {
+  @if $dark-mode == true {
+    color: $color-secundary;
+    background-color: $color-light;
+    &__title {
+      color: get-opacity($color-secundary, 0.5);  
+    }
+    &__button {
+      background-color: $color-primary;
+    }
+  } @else {
+    color: $color-light;
+    background-color: $color-secundary;
+    &__title {
+      color: get-opacity($color-light, 0.5);  
+    }
+    &__button {
+      background-color: get-opacity($color-primary, 0.2);
+      border: 2px solid get-opacity($color-light, 0.5);
+    }
+  }
+}
+
+.profile {
+  width: 50%;
+  padding: 2em;
+  text-align: center;
+  @include profile-mode;
+  &__avatar {
+    border-radius: 35%;
+  }
+  &__name {
+    @include title($font-family-title);
+  }
+  &__title {
+    @include title($font-family-title);
+  }
+  &__button {
+    padding: 0.4em 1em;
+    display: inline-block;
+    border-radius: 2em;
+    text-decoration: none;
+    color: $color-light;
+    font-size: relativeFont(-0.2em);
+    @include title($font-family-title);
+  }
+  &__bio {
+    h2 {
+      margin-top: 1em;
+      @extend .profile__name;
+    }
+    h3 {
+      @extend .profile__title;
+    }
+  }
+}

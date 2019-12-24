@@ -17,7 +17,7 @@ function compilePug() {
  * Compile Sass
  */
 function compileSass() {
-  return src('src/sass/main.sass')
+  return src('src/sass/main.scss')
     .pipe(sass())
     .pipe(dest('public/css/'));
 }
@@ -35,7 +35,7 @@ function copyImages() {
  */
 function watchFiles() {
   watch(['src/index.pug', 'src/pug/**/*.pug'], compilePug);
-  watch('src/sass/**/*.sass', compileSass);
+  watch('src/sass/**/*.scss', compileSass);
 }
 
 exports.default = series(compilePug, compileSass, copyImages, watchFiles);

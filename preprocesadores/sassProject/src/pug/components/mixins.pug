@@ -1,0 +1,10 @@
+mixin statistic(statisticItem)
+  .statistic
+    h3=statisticItem.value
+    span=statisticItem.legend
+
+mixin article(articleItem)
+  .article 
+    span.article__category=articleItem.category
+    h2.article__title=articleItem.title
+    p.article__description=articleItem.description
