@@ -27,7 +27,7 @@ function compileStylus() {
  */
 function copyImages() {
   return src('src/images/*')
-    .pipe(dest('pulic/images/'));
+    .pipe(dest('public/images/'));
 }
 
 function watchFiles() {
@@ -35,4 +35,4 @@ function watchFiles() {
   watch('src/stylus/**/*.styl', compileStylus);
 }
 
-exports.default = series(compilePug, compileStylus, watchFiles);
+exports.default = series(compilePug, compileStylus,copyImages, watchFiles);
