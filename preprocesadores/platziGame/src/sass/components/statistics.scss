@@ -1,0 +1,16 @@
+.statistics-profile {
+  display: flex;
+  justify-content: space-around;
+  @extend %block-section;
+  .statistic {
+    h3 {
+      margin: 0;
+      @include title($font-family-title);
+    }
+    span {
+      color: get-opacity($color-primary, 0.5);
+      font-weight: 600;
+      @include title($font-family-title);
+    }
+  }
+}

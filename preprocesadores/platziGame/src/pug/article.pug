@@ -1,0 +1,44 @@
+extend components/themplate.pug
+block page-title
+  title Artículo
+block page-body
+  header.intro
+    img.intro__image(src="../images/intro.jpg")
+    .intro__content
+      div
+        p Noticias
+        h1  Cyberpunk 2077 tiene tres prólogos distintos
+        div.intro__author
+          img(src="../images/avatar.jpg")
+          p Author
+            span.intro__author-name John Wich
+  section.article-main
+    h2.
+      En Cyberpunk 2077 los jugadores pdrán seleccionar entre tres historias de
+      origen diferentes, cada una presentando una ubicación de partida distinta
+      para su personaje.
+    p.
+      Conversando con VG247, el diseñador Pawel Sasko explicó un sistema que CD
+      Projekt RED llama "Lifepaths" (caminos de vida), que en la práctica suena
+      muy similar a las historias sobre el origen del personaje Dragon Age: Origins.
+    p.
+      Uno de estos caminos de vida comienza en los Badlands, las áridas tierras que
+      rodean Night City (suponemos que es el Nomad). CD Projeckt RED no ha ofrecido
+      descripción de las otras áreas, pero aparece sensato suponer que los personajes
+      de Corpo podrían comenzar en un distrito más corporativo de Night City, mientras
+      que Street Kits podrian provenir de áreas de barrios marginales.
+    h4 Noticias, fechas de lanzamiento y plataformas de cyberpunk 2077
+    p.
+      En otras noticias, recientemente descubrimos que CD Projekt RED tiene planes de
+      desarrollar tres juegos Cyberpunk, y que Cyberpunk 2077 contará con tramas
+      románticas similares a las que vimos en The Wincher 3. Si el romance no es su
+      estilo, no se preocupen, podrá ser tan malvados como deseen gracias a que Cyberpunk
+      2077 no tendrá un sistema de moralidad.
+    p.
+      Cyberpunk 2077 se pondrá disponible el 16 de abril del 2020 y se lanzará en
+      versiones para PC, PlayStation 4 y Xbox One.
+  section.news
+    p.news__title No te pierdas
+    .news__content
+      each newItem in news
+        +new(newItem)

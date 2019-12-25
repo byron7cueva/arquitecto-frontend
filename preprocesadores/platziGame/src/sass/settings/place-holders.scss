@@ -1,0 +1,9 @@
+%block-section {
+  margin-top: 1em;
+  padding: 1em 2.5em 1em 1em;
+  border-radius: 10px;
+  background-color: $color-light;
+  color: $color-primary;
+  @include box-shadow(20px, 33px);
+  @include center-container(400px);
+}

@@ -1,0 +1,50 @@
+.intro {
+  height: 400px;
+  width: 100%;
+  position: relative;
+  @include box-shadow(5px, 15px);
+  &__image {
+    height: calc(100% - 1em);
+    width: calc(100% - 1em);
+    position: absolute;
+    top: 0.5em;
+    left: 0.5em;
+    right: 0.5em;
+    bottom: 0.5em;
+    object-fit: cover;
+  }
+  &__content {
+    height: 100%;
+    color: $color-light;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    @include center-flexbox();
+    @include title($font-family-title);
+    > div {
+      width: 75%;
+    }
+    h1, p {
+      margin: 0;
+    }
+    p {
+      font-size: 0.5em;
+      color: rgba($color-light, 0.50);
+    }
+  }
+  &__author {
+    @include center-flexbox();
+    img {
+      margin-right: 0.5em;
+      width: 50px;
+      border-radius: 50%;
+    }
+    p {
+      text-align: left;
+    }
+    &-name {
+      display: block;
+      color: rgba($color-light, 0.50);
+    }
+  }
+}

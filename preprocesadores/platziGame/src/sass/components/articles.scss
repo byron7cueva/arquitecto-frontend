@@ -1,0 +1,49 @@
+@mixin articles-mode {
+  @if $dark-mode == true {
+    background-color: $color-primary;
+    color: $color-light;
+  } @else {
+    background-color: $color-light;
+    color: $color-dark;
+  }
+}
+
+.articles {
+  width: 50%;
+  padding: 2em 0 2em 3em;
+  @include articles-mode;
+}
+
+.article {
+  margin-bottom: 3em;
+  border-bottom: 2px solid $color-variant;
+  &__category {
+    font-weight: 600;
+    color: $color-secundary;
+    @include title($font-family-title);
+  }
+  &__title {
+    font-weight: 600;
+    padding-right: 1em;
+    @include title($font-family-title);
+  }
+  &__description {
+    padding-right: 1em;
+  }
+}
+
+.article-main {
+  max-width: 768px;
+  width: 75%;
+  margin: 0 auto;
+  h2 {
+    margin-top: 1.5em;
+  }
+  p {
+    @include relative-font(-0.1em);
+  }
+  h4 {
+    color: $color-secundary;
+    @include title($font-family-title);
+  }
+}

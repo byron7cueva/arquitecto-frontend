@@ -1,0 +1,40 @@
+.news {
+  margin: 1em 0;
+  &__title {
+    color: $color-secundary;
+    @include title($font-family-title);
+    text-align: center;
+    &::after{
+      content: "...";
+    }
+  }
+  &__content {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+.new {
+  max-width: 350px;
+  width: 30%;
+  @include box-shadow(5px, 15px);
+  &__image {
+    margin: 0;
+    img {
+      width: 100%;
+      vertical-align: top;
+    }
+  }
+  &__detail {
+    padding: 1em;
+    &-category {
+      color: $color-secundary;
+      @include title($font-family-title);
+    }
+    &-title {
+      @include title($font-family-title);
+    }
+    a {
+      @include link();
+    }
+  }
+}

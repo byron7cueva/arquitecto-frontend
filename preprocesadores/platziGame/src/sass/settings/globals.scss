@@ -1,0 +1,6 @@
+@each $tag, $size in(h1: 0.2em, h2: 0.1em, h3: -0.1em, span: -0.3em) {
+  #{$tag} {
+    margin: 0;
+    font-size: relativeFont($size);
+  }
+}

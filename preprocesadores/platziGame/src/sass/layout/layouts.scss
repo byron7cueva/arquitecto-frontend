@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: $font-family-content;
+  font-size: $font-size-base;
+  background-color: $color-light;
+}
+
+main {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+}

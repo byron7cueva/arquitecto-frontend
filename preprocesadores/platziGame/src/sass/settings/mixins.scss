@@ -1,0 +1,35 @@
+@mixin title($font-family) {
+  @if $font-family == $font-family-title {
+    font-family: $font-family-title;
+    text-transform: uppercase;
+  } @else {
+    font-family: $font-family-content;
+  }
+}
+
+@mixin center-container($size) {
+  max-width: $size;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin center-flexbox() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin box-shadow($offset-y, $blur-radius) {
+  box-shadow: 0px $offset-y $blur-radius 0px rgba($color-primary, 0.5);
+}
+
+@mixin relative-font($diference-font) {
+  font-size: 1em + $diference-font;
+  line-height: 1.2em;
+}
+
+@mixin link() {
+  color: $color-variant;
+  @include title($font-family-title);
+}

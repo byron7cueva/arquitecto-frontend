@@ -1,0 +1,19 @@
+//Variables
+@import "settings/variables.scss";
+@import "settings/functions.scss";
+@import "settings/globals.scss";
+@import "settings/mixins.scss";
+@import "settings/place-holders.scss";
+
+//Layout
+@import "layout/layouts.scss";
+
+//Components
+@import "components/profiles.scss";
+@import "components/statistics.scss";
+@import "components/locations.scss";
+@import "components/galeries.scss";
+@import "components/articles.scss";
+
+@import "components/intros.scss";
+@import "components/news.scss";

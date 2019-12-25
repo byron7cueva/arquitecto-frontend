@@ -1,0 +1,9 @@
+mixin new(newItem)
+  article.new
+    figure.new__image
+      img(src="../images/" + newItem.img)
+    .new__detail
+      p.new__detail-category=newItem.category
+      h3.new__detail-title=newItem.title
+      p.new__detail-description=newItem.description
+      a Leer más
