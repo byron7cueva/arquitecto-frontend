@@ -1,0 +1,24 @@
+include pug/content/variables.pug
+include pug/components/results.pug
+
+doctype html
+html
+  head
+    title PlatziGames
+    meta(charset="utf-8")
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, maximum-scale=1.0, user-scalable=no')
+    link(rel="stylesheet",href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i|Oswald:400,500,600,700&display=swap" )
+    link(rel='stylesheet', href='css/main.css')
+    script(src='https://kit.fontawesome.com/552ebddad2.js')
+  body
+    .searcher: from: input(type="text" placeholder="Playstation" class="searcher__input")
+    header.filters-header
+      h2 20 Resultados para "Playstation"
+      .filters
+        span Filtrar por
+        a(href="#" class="fa fa-th-large")
+        a(href="#" class="fa fa-bars")
+    section.content
+      each resultItem in results
+        +result(resultItem)
