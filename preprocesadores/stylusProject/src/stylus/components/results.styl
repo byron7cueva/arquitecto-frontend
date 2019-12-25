@@ -1,0 +1,30 @@
+.results-content
+    flex-wrap wrap
+    container()
+
+.result
+  width 32%
+  margin-bottom 1em
+  display flex
+  flex-direction column
+  container-shadow()
+  &__image
+    display block
+    width auto
+    height 150px
+    img
+      width 100%
+      height 100%
+      object-fit cover
+      vertical-align top
+  &__content
+      padding 0.5em 0.7em
+      flex 1 1
+      span
+        font-size 0.7em
+        color color-secundary
+        title(font-family-title)
+      h3
+        title(font-family-title)
+      p
+        font-size 0.8em

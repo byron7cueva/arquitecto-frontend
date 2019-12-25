@@ -1,0 +1,17 @@
+title(font)
+  if font == font-family-title
+    font-family font-family-title
+    font-weight 600
+    text-transform uppercase
+  else
+    font-family font-family-content
+
+container()
+  width 100%
+  margin-top 1em
+  padding 0 1em
+  display flex
+  justify-content space-between
+
+container-shadow()
+  box-shadow 0px 20px 33px 0px rgba(0,0,0,0.20)

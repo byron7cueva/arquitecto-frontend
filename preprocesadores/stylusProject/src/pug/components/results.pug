@@ -1,5 +1,5 @@
 mixin statistic
-  .statistic-acticles: ul
+  ul.statistic-acticles
     li
       i.fas.fa-share
       span 275
@@ -12,9 +12,10 @@ mixin statistic
 
 mixin result(resultItem)
   .result
-    a(href="#",class="result__image"): img(src="../images/"+resultItem.img)
+    if(resultItem.img)
+      a(href="#",class="result__image"): img(src="../images/"+resultItem.img)
     .result__content
       span.result__category=resultItem.category
-      h3=resultItem.category
+      h3=resultItem.title
       p=resultItem.description
     +statistic
