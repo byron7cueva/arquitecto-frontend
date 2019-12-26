@@ -2,6 +2,6 @@
   @return 1em + $relativeFont;
 }
 
-@function get-opacity($color, $nivel) {
-  @return rgba($color, $nivel);
+@function get-opacity($color, $level) {
+  @return rgba($color, $level);
 }

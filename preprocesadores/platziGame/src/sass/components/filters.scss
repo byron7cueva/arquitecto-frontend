@@ -1,0 +1,25 @@
+.filters-header {
+  align-items: center;
+  @include columns-container();
+  h2 {
+    @include title($font-family-title);
+  }
+}
+
+.filters {
+  font-size: 0.7em;
+  padding: 0.5em;
+  @include box-shadow(20px, 33px);
+  span {
+    font-weight: 500;
+    @include title($font-family-title);
+  }
+  a {
+    margin-left: 0.5em;
+    color: $color-primary;
+    text-decoration: none;
+  }
+  a:nth-of-type(1) {
+    margin-left: 1em;
+  }
+}

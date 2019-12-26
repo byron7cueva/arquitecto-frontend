@@ -1,0 +1,14 @@
+extend components/themplate.pug
+block page-title
+  title Buscar
+block page-body
+  .searcher: from: input(type="text" placeholder="Playstation" class="searcher__input")
+  header.filters-header
+    h2 20 Resultados para "Playstation"
+    .filters
+      span Filtrar por
+      a(href="#" class="fa fa-th-large")
+      a(href="#" class="fa fa-bars")
+  section.results-content
+    each resultItem in results
+      +result(resultItem)

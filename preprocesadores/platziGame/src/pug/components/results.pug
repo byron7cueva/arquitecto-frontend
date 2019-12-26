@@ -1,0 +1,21 @@
+mixin statistic-articles
+  ul.statistic-acticles
+    li
+      i.fas.fa-share
+      span 275
+    li
+      i.fas.fa-eye
+      span 275
+    li
+      i.fas.fa-comment-alt
+      span 12
+
+mixin result(resultItem)
+  .result
+    if(resultItem.img)
+      a(href="#",class="result__image"): img(src="../images/"+resultItem.img)
+    .result__content
+      span.result__category=resultItem.category
+      h3=resultItem.title
+      p=resultItem.description
+    +statistic-articles

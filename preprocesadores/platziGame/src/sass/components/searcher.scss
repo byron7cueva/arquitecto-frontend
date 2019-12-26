@@ -1,0 +1,14 @@
+.searcher {
+  width: 100%;
+  padding: 2.5em 0;
+  text-align: center;
+  background-image: url('../images/cover.jpg');
+  background-size: cover;
+  &__input {
+    width: 75%;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+  }
+}

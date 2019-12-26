@@ -1,0 +1,38 @@
+.results-content {
+    flex-wrap: wrap;
+    @include columns-container();
+}
+
+.result {
+  width: 32%;
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  @include box-shadow(20px, 33px);
+  &__image {
+    display: block;
+    width: auto;
+    height: 150px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      vertical-align: top;
+    }
+  }
+  &__content {
+      padding: 0.5em 0.7em;
+      flex: 1 1;
+      span {
+        font-size: 0.7em;
+        color: $color-secundary;
+        @include title($font-family-title)
+      }
+      h3 {
+        @include title($font-family-title);
+      }
+      p {
+        font-size: 0.8em;
+      }
+  }
+}

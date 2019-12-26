@@ -2,6 +2,7 @@
   @if $font-family == $font-family-title {
     font-family: $font-family-title;
     text-transform: uppercase;
+    font-weight: 600;
   } @else {
     font-family: $font-family-content;
   }
@@ -18,6 +19,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@mixin columns-container() {
+  width: 100%;
+  margin-top: 1em;
+  padding: 0 1em;
+  display: flex;
+  justify-content: space-between;
 }
 
 @mixin box-shadow($offset-y, $blur-radius) {
