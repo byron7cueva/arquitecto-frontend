@@ -10,5 +10,6 @@ block page-body
       a(href="#" class="fa fa-th-large")
       a(href="#" class="fa fa-bars")
   section.results-content
-    each resultItem in results
-      +result(resultItem)
+    each resultItem in articles
+      if(resultItem.search == true)
+        +result(resultItem)

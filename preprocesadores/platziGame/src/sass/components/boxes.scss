@@ -1,0 +1,60 @@
+.box {
+  display: flex;
+  position: relative;
+  &__background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: $color-primary;
+    img {
+      width: inherit;
+      height: inherit;
+      object-fit: cover;
+      opacity: 0.5;
+    }
+  }
+  &__content {
+    position: relative;
+    z-index: 2;
+    padding: 1.1em;
+    color: $color-light;
+  }
+  &__category {
+    display: inline-block;
+    background-color: $color-secundary;
+    padding: 0.5em 1em;
+    @include title($font-family-title);
+  }
+  h2 {
+    @include title($font-family-title);
+  }
+  p {
+    @include font-size(16px);
+  }
+  &--large {    
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    .box__content {
+      width: 70%;
+    }
+    h2 {
+      @include font-size(50px);
+    }
+  }
+  &--medium, &--small {
+    justify-content: flex-start;
+    align-items: center;
+    h2 {
+      @include font-size(18px);
+    }
+  }
+  &--medium {
+    .box__content {
+      width: 50%;
+    }
+  }
+}

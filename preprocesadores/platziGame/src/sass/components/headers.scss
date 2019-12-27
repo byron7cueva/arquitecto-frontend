@@ -1,0 +1,42 @@
+.header-main {
+  padding: 0 2em;
+  height: 90px;
+  width: 100%;
+  display: flex;
+  align-items: center;  
+  &__logo {
+    height: 100%;
+  }
+}
+
+.nav-header {
+  height: 100%;
+  flex: 1 1;
+  padding-left: 2em;
+  ul {
+    height: inherit;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    list-style: none;
+    @include relative-font(-0.3em);
+  }
+  a {
+    color: $color-variant;
+    @extend %link-menu;
+  }
+}
+
+.header-search {
+  color: $color-variant;
+  @extend %link-menu;
+  .fa-search {
+    @include relative-font(0.2em);
+  }
+  span {
+    margin-left: 0.5em;
+    font-size: 1em;
+  }
+}

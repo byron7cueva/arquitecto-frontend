@@ -40,5 +40,6 @@ block page-body
   section.news
     p.news__title No te pierdas
     .news__content
-      each newItem in news
-        +new(newItem)
+      each val in [0, 1, 2]
+        if(articles[val].type == 'Video')
+          +new(articles[val])

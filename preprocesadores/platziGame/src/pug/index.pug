@@ -1,0 +1,19 @@
+extend components/themplate.pug
+block page-title
+  title Platzi Games
+block page-body
+  main.home-container
+    +box(articles[article_principal], 'large')
+    +box(articles[article_secundary], 'small')
+    .banner-homepage
+      h3=articles[article_banner].title
+      p=articles[article_banner].description
+      a.button Leer más
+    +box(articles[article_medium], 'medium')
+    each val in [5, 0, 1]
+      +box(articles[val], 'small')
+    .sidebar-news
+      h3 Noticias destacadas
+      ul
+        each val in [6, 7, 8]
+          li=articles[val].title

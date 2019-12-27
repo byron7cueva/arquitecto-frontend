@@ -7,3 +7,21 @@
   @include box-shadow(20px, 33px);
   @include center-container(400px);
 }
+
+%link-menu {
+  margin-left: 1em;
+  @include title($font-family-title);
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+%button {
+  padding: 0.4em 1em;
+  display: inline-block;
+  border-radius: 2em;
+  text-decoration: none;
+  color: $color-light;
+  font-size: relativeFont(-0.2em);
+  @include title($font-family-title);
+}

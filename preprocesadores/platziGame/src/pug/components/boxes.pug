@@ -1,0 +1,9 @@
+mixin box(item, size)
+  a(class="box box--"+size)
+    .box__background: img(src="../images/"+item.img)
+    .box__content
+      span.box__category=item.category
+      h2=item.title
+      if(size == 'large')
+        p=item.description
+      +statistic-articles('dark')

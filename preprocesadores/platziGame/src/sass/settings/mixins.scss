@@ -42,3 +42,8 @@
   color: $color-variant;
   @include title($font-family-title);
 }
+
+@mixin font-size($size) {
+  font-size: calculateRem($size);
+  line-height: calculateRem($size) * 1.5;
+}

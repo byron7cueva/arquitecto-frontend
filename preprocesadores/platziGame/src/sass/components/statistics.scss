@@ -27,4 +27,13 @@
   span {
     margin-left: 0.5em;
   }
+  &--dark {
+    width: 50%;
+    margin: 0 auto;
+    border: none;
+    color: $color-light;
+    span {
+      color: get-opacity($color-light, 0.5);
+    }
+  }
 }

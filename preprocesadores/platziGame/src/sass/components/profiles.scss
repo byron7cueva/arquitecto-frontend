@@ -36,13 +36,7 @@
     @include title($font-family-title);
   }
   &__button {
-    padding: 0.4em 1em;
-    display: inline-block;
-    border-radius: 2em;
-    text-decoration: none;
-    color: $color-light;
-    font-size: relativeFont(-0.2em);
-    @include title($font-family-title);
+    @extend %button;
   }
   &__bio {
     h2 {

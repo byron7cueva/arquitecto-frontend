@@ -2,6 +2,8 @@ include ../contents/variables.pug
 include news.pug
 include articles.pug
 include results.pug
+include menu.pug
+include boxes.pug
 
 doctype html
 html
@@ -14,4 +16,6 @@ html
     link(rel="stylesheet", href="../css/main.css")
     script(src="https://kit.fontawesome.com/552ebddad2.js")
   body
+    include headers.pug
     block page-body
+    include footers.pug

@@ -2,7 +2,7 @@ extend components/themplate.pug
 block page-title
   title Profile
 block page-body
-  main
+  main.profile-main
     section.profile
       img(class="profile__avatar" src="../images/avatar.jpg")
       h2.profile__name John Wick
@@ -26,4 +26,5 @@ block page-body
         img(src="../images/galeria4.jpg")
     aside.articles
       each articleItem in articles
-        +article(articleItem)
+        if(articleItem.type == 'Noticia' && articleItem.search == undefined)
+          +article(articleItem)

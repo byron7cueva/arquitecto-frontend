@@ -1,5 +1,5 @@
-mixin statistic-articles
-  ul.statistic-acticles
+mixin statistic-articles(mode)
+  ul(class="statistic-acticles statistic-acticles--"+mode)
     li
       i.fas.fa-share
       span 275
@@ -12,10 +12,10 @@ mixin statistic-articles
 
 mixin result(resultItem)
   .result
-    if(resultItem.img)
+    if(resultItem.type == 'Video')
       a(href="#",class="result__image"): img(src="../images/"+resultItem.img)
     .result__content
-      span.result__category=resultItem.category
+      span.result__category=resultItem.type
       h3=resultItem.title
       p=resultItem.description
     +statistic-articles

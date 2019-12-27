@@ -1,0 +1,16 @@
+.banner-homepage {
+  padding: 2em;
+  color: $color-light;
+  background-color: $color-secundary;
+  h3 {
+    @include title($font-family-title);
+  }
+  .button {
+    background-color: get-opacity($color-primary, 0.2);
+    border: 2px solid get-opacity($color-light, 0.5);
+    @extend %button;
+  }
+  p {
+    @include font-size(16px);
+  }
+}

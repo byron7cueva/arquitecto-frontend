@@ -1,0 +1,33 @@
+.footer-main {
+  padding: 0 2em;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: $color-primary;
+  &__logo {
+    flex: 1 1;
+  }
+}
+
+.nav-footer ul {
+  margin-top: 1em;
+  display: flex;
+  list-style: none;
+  @include relative-font(-0.3em);
+  a {
+    color: $color-light;
+    @extend %link-menu;
+  }
+}
+
+.nav-social ul {
+  margin-top: 1em;
+  display: flex;
+  list-style: none;
+  color: $color-light;
+  @include relative-font(-0.3em);
+  a {
+    color: $color-light;
+    @extend %link-menu;
+  }
+}

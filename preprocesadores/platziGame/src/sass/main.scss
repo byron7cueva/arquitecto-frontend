@@ -1,5 +1,6 @@
 //Reset
 @import "vendor/bootstrap_reboot.scss";
+@import "vendor/grids.scss";
 
 //Variables
 @import "settings/variables.scss";
@@ -10,8 +11,12 @@
 
 //Layout
 @import "layout/layouts.scss";
+@import "layout/homepage.scss";
 
 //Components
+@import "components/headers.scss";
+@import "components/footers.scss";
+
 @import "components/profiles.scss";
 @import "components/statistics.scss";
 @import "components/locations.scss";
@@ -24,3 +29,6 @@
 @import "components/filters.scss";
 @import "components/results.scss";
 @import "components/searcher.scss";
+
+@import "components/boxes.scss";
+@import "components/banners.scss";
