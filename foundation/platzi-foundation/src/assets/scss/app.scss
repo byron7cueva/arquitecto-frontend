@@ -57,8 +57,52 @@
 @include foundation-float-classes;
 @include foundation-flex-classes;
 @include foundation-visibility-classes;
-// @include foundation-prototype-classes;
+@include foundation-prototype-classes;
 
 // Motion UI
 @include motion-ui-transitions;
 @include motion-ui-animations;
+
+//Estilos de la aplicación
+#header {
+  border-top: 6px solid $black;
+}
+.product {
+  cursor: pointer;
+  position: relative;
+}
+
+.product .hover {
+  display: none;
+}
+
+.product:hover .normal {
+  display: none;
+}
+
+.product:hover .hover {
+  display: block;
+}
+
+.product .new {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.product .promo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $black;
+  display: none;
+}
+
+.product:hover .promo {
+  display: block;
+}
+
+.product .promo i {
+  float: right;
+}
