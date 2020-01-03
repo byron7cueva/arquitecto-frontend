@@ -1,0 +1,6 @@
+<header><app-menu></app-menu></header>
+<main class="container">
+  <router-outlet></router-outlet>
+  <button *ngIf="!editMode" mat-fab class="actions" (click)="openBottomSheet()"><i class="material-icons"> save </i></button>
+  <button *ngIf="editMode" mat-fab class="actions" [routerLink]="['/']"><i class="material-icons"> book </i></button>
+</main>

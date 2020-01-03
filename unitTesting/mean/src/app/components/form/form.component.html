@@ -1,0 +1,41 @@
+<mat-card class="form">
+  <mat-horizontal-stepper [linear]="true" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Fill out the path description</ng-template>
+        <mat-form-field> <input matInput placeholder="Title" formControlName="title" required /> </mat-form-field>
+        <mat-form-field> <input matInput placeholder="Author" formControlName="author" required /> </mat-form-field>
+        <mat-form-field class="extra">
+          <textarea matInput placeholder="Description" formControlName="description"></textarea>
+        </mat-form-field>
+        <button mat-button matStepperNext class="button-right">Next</button>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+      <form [formGroup]="secondFormGroup" class="multiple-input">
+        <ng-template matStepLabel>Fill out material</ng-template>
+
+        <mat-form-field> <input matInput placeholder="Give me the url" formControlName="firstAsset" required /> </mat-form-field>
+
+        <div formArrayName="assets" class="assets-array" *ngFor="let item of secondFormGroup.get('assets').controls; let i = index">
+          <mat-form-field [formGroupName]="i"> <input matInput formControlName="url" placeholder="Give me the url" /> </mat-form-field>
+          <button mat-icon-button (click)="deleteAsset(i)">
+            <mat-icon aria-label="Example icon-button with a heart icon">delete</mat-icon>
+          </button>
+        </div>
+
+        <button mat-stroked-button color="primary" (click)="addAsset()">add other url</button>
+
+        <div class="button-right"><button mat-button matStepperPrevious>Back</button> <button mat-button matStepperNext>Next</button></div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      <p>You are now done. Click on "Save it!"" to finish the process</p>
+      <div>
+        <button mat-button matStepperPrevious>Back</button> <button mat-button (click)="stepper.reset()">Reset</button>
+        <button mat-stroked-button color="primary" (click)="savePin()">Save it!</button>
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>
+</mat-card>

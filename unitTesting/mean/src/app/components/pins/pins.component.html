@@ -1,0 +1,26 @@
+<mat-accordion class="pins">
+  <mat-expansion-panel *ngFor="let pin of pins; let index = index" [expanded]="step === index" (opened)="setStep(index)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title> {{ pin.title }} </mat-panel-title>
+      <mat-panel-description>
+        {{ pin.description }}
+        <mat-icon>account_circle</mat-icon>
+      </mat-panel-description>
+      <div class="percentage-element" [ngStyle]="{ 'width.%': pin.percentage }"></div>
+    </mat-expansion-panel-header>
+    <mat-list>
+      <form [formGroup]="pin.formGroup">
+        <mat-list-item *ngFor="let asset of pin.assets">
+          <button (click)="openUrl(asset.url)" mat-mini-fab color="accent">Go</button>
+          <mat-checkbox [formControlName]="asset._id" labelPosition="before">{{ asset.title }}</mat-checkbox>
+        </mat-list-item>
+      </form>
+    </mat-list>
+
+    <mat-action-row>
+      <button mat-button color="primary" (click)="updateProgress(index)">Update Progress</button>
+      <button mat-button color="primary" (click)="nextStep()">Next</button>
+      <button mat-button color="primary" (click)="prevStep()">Prev</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>

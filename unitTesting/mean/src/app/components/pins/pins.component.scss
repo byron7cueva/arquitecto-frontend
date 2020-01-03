@@ -1,0 +1,67 @@
+.pins {
+  .mat-expansion-panel-header-title,
+  .mat-expansion-panel-header-description {
+    flex-basis: 0;
+  }
+
+  .mat-expansion-panel-header-description {
+    justify-content: space-between;
+    align-items: center;
+  }
+  .mat-list-item {
+    margin-bottom: 1em;
+  }
+
+  .mat-checkbox {
+    margin-right: 1em;
+    flex: 1;
+
+    .mat-checkbox-layout {
+      display: flex;
+      width: 100%;
+      padding: 0.5em;
+      margin-left: 10px;
+      border-radius: 7px;
+
+      .mat-checkbox-label {
+        white-space: normal;
+      }
+
+      &:hover {
+        background: #e8eaf6;
+        box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+      }
+    }
+
+    .mat-checkbox-inner-container {
+      margin-left: auto;
+      margin-right: 5px;
+    }
+  }
+
+  .mat-mini-fab {
+    &:hover {
+      background-color: #ff80ab;
+    }
+  }
+
+  .mat-expansion-panel-header {
+    position: relative;
+
+    .percentage-element {
+      position: absolute;
+      background: #e8eaf6;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 50%; /* Specify the width.. */
+      z-index: 0;
+      transition: width 0.5s;
+    }
+
+    .mat-expansion-panel-header-title,
+    .mat-expansion-panel-header-description {
+      z-index: 10;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.form {
+  .mat-form-field {
+    display: block;
+    max-width: 300px;
+
+    &.extra {
+      max-width: 400px;
+    }
+  }
+
+  .button-right {
+    float: right;
+  }
+
+  .assets-array {
+    .mat-form-field,
+    .mat-icon-button {
+      display: inline-block;
+    }
+
+    .mat-form-field {
+      width: 100%;
+    }
+
+    .mat-icon-button:hover {
+      color: #ff4081;
+    }
+  }
+}

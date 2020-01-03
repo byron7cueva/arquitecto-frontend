@@ -1,0 +1,7 @@
+<mat-nav-list>
+  <a mat-list-item (click)="openLink($event, 'save')"> <span mat-line>SAVE</span> <span mat-line>Save progress</span> </a>
+
+  <a mat-list-item [routerLink]="['/app/add']" (click)="openLink($event, 'create')">
+    <span mat-line>CREATE</span> <span mat-line>Create new learning path</span>
+  </a>
+</mat-nav-list>
